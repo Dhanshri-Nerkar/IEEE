@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Committee - MISSF 2026</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+      body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+
+}
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white; /* Changed to white */
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif; /* Revert navbar font to Arial */
+        }
+        .navbar .logo {
+            height: 70px; /* Increased logo size */
+        }
+        .navbar nav a {
+            color: #002855; /* Dark blue for text */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 20px; /* Increased font size */
+            transition: color 0.3s;
+        }
+        .navbar nav a:hover {
+            color: #002855; /* Lighter blue on hover */
+        }
+
+        /* Committee Section Styles */
+        .committee-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .committee-section h2 {
+            color: #002855;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .committee-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .committee-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .committee-card:hover {
+            transform: translateY(-5px);
+        }
+        .committee-card img {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+        }
+        .committee-card h3 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #002855;
+        }
+        .committee-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .committee-card p strong {
+            font-weight: bold;
+            color: #002855;
+        }
+
+        /* Committees Section Styles */
+        #committees {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        #committees h2 {
+            color: #002855;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        #committees h3 {
+            color: #002855;
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        #committees ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        #committees ul li {
+            background: #f8f9fa;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #002855;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* Centered Headings for Organizing Chair and Patrons */
+        #organizing-chair h2,
+        #patrons h2 {
+            text-align: center;
+            color: #004aad;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="static/Images/ieee-logo.png" alt="IEEE Logo" class="logo">
+            <nav>
+                <a href="index.html">Home</a>
+            <a href="committee.html">Committee</a>
+            <a href="session-chair.html">Session Chairs</a>
+            <a href="key-dates.html">Key Dates</a>
+            <a href="call-for-papers.html">Call for Papers</a>
+            <a href="registration.html">Registration</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="venue.html">Venue</a>
+            </nav>
+            <img src="static/Images/svkm-logo.png" alt="SVKM Logo" class="logo">
+        </div>
+    </header>
+
+    <!-- Chief Patrons -->
+    <section class="committee-section">
+        <h2>Chief Patrons</h2>
+        <div class="committee-container">
+            <div class="committee-card">
+                <img src="static/Images/Honble Shri Amrishbhai Patel.jpg" alt="Hon’ble Shri Amrishbhai Patel">
+                <h3>Hon’ble Shri Amrishbhai Patel</h3>
+                <p><strong>President</strong>, SVKM Mumbai</p>
+            </div>
+            <div class="committee-card">
+                <img src="static/Images/Honble Shri Bhupeshbhai Patel Joint President, SVKM Mumbai.png" alt="Hon’ble Shri Bhupeshbhai Patel">
+                <h3>Hon’ble Shri Bhupeshbhai Patel</h3>
+                <p><strong>Joint President</strong>, SVKM Mumbai</p>
+            </div>
+            <div class="committee-card">
+                <img src="static/Images/Honble Shri Chintanbhai Patel.jpg" alt="Hon’ble Shri Chintanbhai Patel">
+                <h3>Hon’ble Shri Chintanbhai Patel</h3>
+                <p><strong>Vice-President</strong>, SVKM Mumbai</p>
+
+            </div>
+            <div class="committee-card">
+                <img src="static/Images/Honble Smt. SnehaA. Parekh.jpg" alt="Hon’ble Smt. Sneha A. Parekh">
+                <h3>Hon’ble Smt. Sneha A. Parekh </h3>
+                <p><strong>President & Chancellor</strong>,SVKM NMIMS Global University</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patrons -->
+    <section class="committee-section">
+        <h2>Patrons</h2>
+        <div class="committee-container">
+            <div class="committee-card">
+                <img src="static/Images/Shri Rajgopal Bhandari.jpg" alt="Shri Rajgopal Bhandari">
+                <h3>Shri Rajgopal Bhandari</h3>
+                <p><strong>Member, Managing Committee</strong>, SVKM Mumbai</p>
+            </div>
+            <div class="committee-card">
+                <img src="static/Images/Shri Sanjay Agarwal , Chairman, SVKM NMIMS Dhule Campus.jpg" alt="Shri Sanjay Agarwal">
+                <h3>Shri Sanjay Agarwal</h3>
+                <p><strong>Chairman</strong>, SVKM NMIMS Dhule Campus</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizing Chair -->
+    <section class="committee-section">
+        <h2>Organizing Chair</h2>
+        <div class="committee-container">
+            <div class="committee-card">
+                <img src="static/Images/Dr. Nilesh Salunke.jpg" alt="Dr. Nilesh Salunke">
+                <h3>Dr. Nilesh Salunke</h3>
+                <p><strong>Principal</strong>, SVKM’s Institute of Technology, Dhule</p>
+            </div>
+       
+        </div>
+        </div>
+    </section>
+        <section class="committee-section">
+        <h2>Conference Chair</h2>
+        <div class="committee-container">
+            
+            <div class="committee-card">
+            <img src="static/Images/electric_hod.png" alt="Dr. Vishal Moyal">
+            <h3>Dr. Vishal Moyal</h3>
+            <p><strong>HoD</strong>, Electrical Engineering</p>
+        </div>
+        </div>
+    </section>
+
+   <!-- Co-organizing Chairs -->
+<section class="committee-section">
+    <h2>Co-Organizing Chairs</h2>
+    <div class="committee-container">
+        <div class="committee-card">
+            <img src="static/Images/Dr. Makarand Shahde.png" alt="Dr. Makrand Shahade">
+            <h3>Dr. Makrand Shahade</h3>
+            <p><strong>HoD</strong>, Computer Engineering</p>
+        </div>
+        <div class="committee-card">
+            <img src="static/Images/Dr Bhushan Chaudhari.png" alt="Dr. Bhushan Chaudhari">
+            <h3>Dr. Bhushan Chaudhari</h3>
+            <p><strong>HoD</strong>, Information Technology</p>
+        </div>
+        <div class="committee-card">
+            <img src="static/Images/Dr. Hitesh Thakare (1).png" alt="Dr. Hitesh Thakare">
+            <h3>Dr. Hitesh Thakare</h3>
+            <p><strong>HoD</strong>, Mechanical Engineering</p>
+        </div>
+        <div class="committee-card">
+            <img src="static/Images/shrikant (2).png" alt="Dr. Shrikant Randhavane">
+            <h3>Dr. Shrikant Randhavane</h3>
+            <p><strong>HoD</strong>, Civil Engineering</p>
+        </div>
+        <div class="committee-card">
+            <img src="static/Images/Dr. Tushar Shinde.png" alt="Dr. Tushar Shinde">
+            <h3>Dr. Tushar Shinde</h3>
+            <p><strong>HoD</strong>, Applied Sciences & Humanities</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Committees Section -->
+    <section id="committees">
+        <h2>Committees</h2>
+    
+        <h3>International Advisory Committee</h3>
+        <ul>
+            <li>Prof. (Dr.) Tariq Abdullah, Computing & IT, College of Science and Engineering, University of Derby, United Kingdom</li>
+            <li>Prof. (Dr.) Ramesh C. Bansal, University of Sharjah, UAE</li>
+            <li>Prof. Musa Yilmaz, University of California Riverside, USA</li>
+            <li>Mr. Shipij Rathore, Project Engineer, ABB, Sweden</li>
+            <li>Dr. Rajeev Papneja, AI/ML Expert, Frederick Taylor International University, Arizona, USA</li>
+            <li>Mr. Venkata Thej Deep Jakkaraju, Senior Cloud Engineer, Gamestop Corp, Grapevine, Texas, USA</li>
+        </ul>
+    
+        <h3>National Advisory Committee</h3>
+        <ul>
+            <li>Dr. Avadhut Sardeshmukh, Senior Scientist, Tata Consultancy Services</li>
+            <li>Dr. L. D. Arya, Retd. Professor at SGSITS, Indore, India</li>
+            <li>Dr. R. S. Tare, Retd. Professor at SGSITS, Indore, India</li>
+            <li>Dr. Suresh Deshmukh, Professor at ICT, Mumbai, India</li>
+            <li>Dr. Pragnan Chakraborty, Principal Director, CARET, Bhilai, India</li>
+            <li>Dr. Nilanjan Dey, Associate Professor, Techno International New Town, Kolkata, India</li>
+        </ul>
+        <h3>Technical Program Committee Chair(s)</h3>
+        <ul>
+            <li>Dr. S. R. Sathe, Professor at VNIT, Nagpur</li>
+            <li>Dr. Ashok Bhansali, Dean, School of Engineering, GLA Mathura</li>
+            <li>Dr. Shrikant Tiwari, Associate Professor, Galgotias University, Noida (UP)</li>
+            <li>Dr. Ram Naryan Patel, Associate Professor, NIT Raipur</li>
+            <li>Dr. Ankit Dubey, Associate Professor, IIT Jammu</li>
+            <li>Dr. Madhurdeo Upadhay, Associate Professor, SSM University, Noida</li>
+            <li>Dr. Sudhir K Bhil, Senior Faculty Member, VJTI, Mumbai</li>
+            <li>Tarun Vallabhaneni,
+Independent Researcher USA.
+</li>
+            <li>Nandakishore leburu ,
+Independent Researcher USA
+</li>
+            <li>Bhasker Reddy Ande,
+Manager Solutions Architect, IEEE Senior Member, Ashburn, USA
+</li>
+
+        </ul>
+        <h3>Technical Program Committee (Internal) </h3>
+        <ul>
+            <li>Dr. Namra Joshi, Electrical Engineering Department, SVKM IOT Dhule</li>
+            <li>Dr. Rajkumar Jhapte, Electrical Engineering Department, SVKM IOT Dhule</li>
+            <li>Dr. Manoj Sonawane, Department of Applied Sciences & Humanities, SVKM IOT Dhule</li>
+            <li>Dr. Rajiv Junne, Department of Applied Sciences & Humanities, SVKM IOT Dhule</li>
+            <li>Dr. Amol Badgujar, Mechanical Engineering Department, SVKM IOT Dhule</li>
+            <li>Dr. Kavita Patil, Computer Engineering Department, SVKM IOT Dhule</li>
+            <li>Prof. Umakant Mandawkar, Computer Engineering Department, SVKM IOT Dhule</li>
+            <li>Prof. Mangesh Balpande, IT Department, SVKM IOT Dhule</li>
+            <li>Prof. Shahid Akhtar, Electrical Engineering Department, SVKM IOT Dhule</li>
+            <li>Dr. Shakeel Raheman, Department of Applied Sciences & Humanities, SVKM IOT Dhule</li>
+        </ul>
+        <h3>Organizing Committee</h3>
+        <ul>
+            <li>Dr. Rajkumar Jhapte (Associate Professor)</li>
+            <li>Dr. Gaurav B. Patil (Assistant Professor)</li>
+            <li>Dr. M. Ankushkumar (Assistant Professor)</li>
+            <li>Mr. Jagdish More (Assistant Professor)</li>
+            <li>Ms. Farha Naz (Assistant Professor)</li>
+            <li>Mr. T. M. Shubham (Assistant Professor)</li>
+            <li>Mr. G. Chakrapani (Assistant Professor)</li>
+            <li>Mr. Adnan Khan (Assistant Professor)</li>
+        </ul>
+        
+
+        <h3>Student Office Bearers</h3>
+        <ul>
+            <li>Rohini More — Chairperson</li>
+            <li>Mehul Nahar — Vice Chairperson</li>
+            <li>Bhavika Deshmukh — Secretary</li>
+            <li>Shravani Patil — Treasurer</li>
+            <li>Shweta Nagapure — Web Master</li>
+            <li>Niranjan Bhadage — Media & Publicity Head</li>
+        </ul>
+
+        <h3>Student Member</h3>
+        <ul>
+            <li>Manasi Bhamre — President, EDC Society</li>
+            <li>Vedika Bacchav — Member</li>
+            <li>Dhanashri Chaudhari — Member</li>
+            <li>Aishwarya Wagh — Member</li>
+            <li>Mrunali Patil — Member</li>
+            <li>Shravani Saptal — Member</li>
+            <li>Bhumika Bhavre — Member</li>
+            <li>Nikita Patil — Member</li>
+            <li>Gayatri Patil — Member</li>
+            <li>Durvesh Patil — Member</li>
+            <li>Sumit Mali — Member</li>
+            <li>Deepak Deore — Member</li>
+            <li>Dhanashri Nerkar — Member</li>
+            <li>Atharva Mundke — Member</li>
+            <li>Siddharth Indasrao — Member</li>
+        </ul>
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MISSF Conference | Organized by SVKM’s Institute of Technology, Dhule</p>
+    </footer>
+</body>
+</html>

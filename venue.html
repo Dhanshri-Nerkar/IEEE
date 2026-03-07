@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venue - IEEE Conference</title>
+
+<style>
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg,#eef3f9,#f8f9fa,#e3ecff);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: white;
+    color: #002855;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+header img {
+    height: 70px;
+    margin: 0 20px;
+}
+
+nav a {
+    color: #002855;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #0047AB;
+}
+
+/* ===== SPLIT IMAGE + TEXT SECTION ===== */
+.split-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    width: 85%;
+    margin: 45px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.split-section.reverse {
+    direction: rtl;
+}
+.split-section.reverse .split-text {
+    direction: ltr;
+}
+
+.split-image img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.split-text {
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.7;
+    padding: 10px 20px;
+    border-left: 6px solid #FFD700;
+}
+
+.split-text h2 {
+    color: #002855;
+    margin-bottom: 12px;
+}
+
+/* ===== SECTION HEADERS ===== */
+.section-header {
+    text-align: center;
+    color: #002855;
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-header::after {
+    content:"";
+    display:block;
+    width:70px;
+    height:4px;
+    background:#FFD700;
+    margin:10px auto 0;
+    border-radius:3px;
+    box-shadow:0 3px 8px rgba(255,215,0,0.5);
+}
+
+/* ===== CONTENT BOX ===== */
+.content-box {
+    padding: 26px;
+    margin: 25px auto;
+    background: #ffffff;
+    border-radius: 14px;
+    width: 75%;
+    font-size: 17px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.content-box ul {
+    text-align: left;
+}
+
+/* ===== MAP ===== */
+.map-container {
+    text-align: center;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #002855;
+    color: white;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .split-section {
+        grid-template-columns: 1fr;
+    }
+    .split-section.reverse {
+        direction: ltr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="static/Images/ieee-logo.png">
+    <nav>
+      <a href="index.html">Home</a>
+            <a href="committee.html">Committee</a>
+            <a href="session-chair.html">Session Chairs</a>
+            <a href="key-dates.html">Key Dates</a>
+            <a href="call-for-papers.html">Call for Papers</a>
+            <a href="registration.html">Registration</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="venue.html">Venue</a>
+    </nav>
+    <img src="static/Images/svkm-logo.png">
+</header>
+
+<!-- ================= ABOUT SVKM ================= -->
+
+<section class="split-section">
+    <div class="split-image">
+        <img src="static/Images/image.png" style="object-fit:cover; height:65%; width:90%; margin:auto; display:block; border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,0.15);">
+
+    </div>
+
+    <div class="split-text">
+        <h2>About SVKM’s Institute of Technology</h2>
+        <p>
+            SVKMs Dhule Campus Dhule is largely emerging as one
+of the biggest future hubs of technology and Education. It
+has gained a strategic advantage for being on the junction
+of three National Highways viz. NH-3, NH-6, and NH-211.
+Dhule is aiming to develop into an industrial town which
+may provide next generation technologies across
+infrastructure sectors. Our president has a dream to make
+Dhule city known for its quality education institutes.
+SVKM has taken an inititative to develop state of the art
+engineering and pharmacy institute that will impart quality
+education in Dhule Spread over 33 acres of land on the
+outskirts of Dhule, it will house colleges as SVKM's
+Institute of Technology.
+
+        </p>
+    </div>
+</section>
+
+<!-- ================= ABOUT CONFERENCE ================= -->
+
+<section class="split-section reverse">
+    <div class="split-image">
+        <img src="static/Images/auditorium.png">
+    </div>
+
+    <div class="split-text">
+        <h2>About MISSF 2026 Conference</h2>
+        <p>
+            SVKM's Institute of Technology, Dhule, Maharashtra, India
+is organizing a two day International Conference on “Role of
+Emerging Technologies for Sustainable Development” on
+23rd and 24th January, 2026. The Conference looks for
+significant contributions to all major fields of multidisciplines in theoretical and practical aspects. The aim of
+this conference is to provide an excellent international forum
+for sharing knowledge and results in theory, methodology
+and applications of multidiscipline & its Trends. The aim of
+the conference is to provide a platform to the researchers and
+practitioners from both academia as well as industry to meet
+and share cutting edge development in the field
+        </p>
+
+        <p>
+            The conference encourages interdisciplinary research collaboration
+            and focuses on smart systems, sustainable engineering, and digital
+            transformation technologies.
+        </p>
+
+        <p><strong>
+            All accepted and presented papers will be submitted to IEEE Xplore
+            subject to quality compliance.
+        </strong></p>
+    </div>
+</section>
+
+<!-- ================= VENUE ================= -->
+
+<h1 class="section-header">Conference Venue</h1>
+<div class="content-box">
+    SVKM’s Institute of Technology, Dhule, Maharashtra, India
+</div>
+
+<h2 class="section-header">Location & Directions</h2>
+<div class="content-box">
+    Shri Vile Parle Kelavani Mandal's Institute of Technology<br>
+    Survey No. 499, Plot No 02, Mumbai - Agra Rd, Dhule
+</div>
+
+<h2 class="section-header">How to Reach</h2>
+<div class="content-box">
+<ul>
+<li><strong>Air:</strong> Nashik Airport (88 km), Aurangabad (160 km)</li>
+<li><strong>Rail:</strong> Dhule Railway Station — 5 km</li>
+<li><strong>Road:</strong> Direct buses from Mumbai, Pune, Nashik, Indore</li>
+</ul>
+</div>
+
+<h2 class="section-header">Find Us on Google Maps</h2>
+
+<div class="map-container">
+<iframe src="https://www.google.com/maps?q=svkm+iot+dhule&output=embed"
+width="100%" height="420" style="border:0;"></iframe>
+</div>
+
+<footer>
+© 2026 MISSF Conference | Organized by SVKM’s Institute of Technology, Dhule
+</footer>
+
+</body>
+</html>
