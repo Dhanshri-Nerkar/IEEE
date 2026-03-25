@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -102,7 +103,9 @@
             z-index: -1;
         }
 
-        .hero h1, .hero h2, .hero p {
+        .hero h1,
+        .hero h2,
+        .hero p {
             margin: 10px 0;
             font-family: "Times New Roman", Times, serif;
         }
@@ -148,7 +151,8 @@
             box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
         }
 
-        .speakers, .association {
+        .speakers,
+        .association {
             text-align: center;
             padding: 50px 20px;
             background: white;
@@ -158,12 +162,16 @@
             background-color: #fafafa;
         }
 
-        h1, h2, h3, p {
+        h1,
+        h2,
+        h3,
+        p {
             margin-top: 6px;
             margin-bottom: 6px;
         }
 
-        .speakers h2, .association h2 {
+        .speakers h2,
+        .association h2 {
             font-family: "Times New Roman", Times, serif;
             font-size: 36px;
             color: #002855;
@@ -174,7 +182,8 @@
             display: inline-block;
         }
 
-        .speakers h2::after, .association h2::after {
+        .speakers h2::after,
+        .association h2::after {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -243,26 +252,29 @@
             transition: all 0.3s ease;
             border-top: 3px solid transparent;
         }
-        .keynote-center {
-    justify-self: center;
-    width: 100%;
-    max-width: 240px;
-}
-.keynote-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 25px;
-    max-width: 1080px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.keynote-grid .person-card {
-    flex: 0 0 calc(25% - 30px);
-    max-width: 240px;
-}
+        .keynote-center {
+            justify-self: center;
+            width: 100%;
+            max-width: 240px;
+        }
+
+        .keynote-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+            max-width: 1080px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .keynote-grid .person-card {
+            flex: 0 0 calc(25% - 30px);
+            max-width: 240px;
+        }
+
         .person-card:hover {
             transform: translateY(-8px);
             box-shadow: 0px 12px 25px rgba(0, 40, 85, 0.2);
@@ -281,10 +293,11 @@
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
         }
-.person-card img {
-    object-fit: cover;
-    object-position: center;
-}
+
+        .person-card img {
+            object-fit: cover;
+            object-position: center;
+        }
 
         .person-card:hover img {
             transform: scale(1.05);
@@ -358,16 +371,19 @@
                 font-size: 18px;
             }
 
-            .speakers h2, .association h2 {
+            .speakers h2,
+            .association h2 {
                 font-size: 28px;
             }
 
             .people-grid {
                 grid-template-columns: 1fr;
                 gap: 25px;
-            }/* ===== KEYNOTE FORCE SINGLE ROW ===== */
-/* Center last keynote card */
-/* Center last keynote card in grid */
+            }
+
+            /* ===== KEYNOTE FORCE SINGLE ROW ===== */
+            /* Center last keynote card */
+            /* Center last keynote card in grid */
 
 
 
@@ -384,11 +400,12 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <img src="static/Images/ieee-logo.png" alt="IEEE Logo">
         <nav>
-          <a href="index.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="committee.html">Committee</a>
             <a href="session-chair.html">Session Chairs</a>
             <a href="key-dates.html">Key Dates</a>
@@ -399,7 +416,7 @@
         </nav>
         <img src="static/Images/svkm-logo.png" alt="SVKM Logo">
     </header>
-   
+
     <div class="hero">
         <h1>International Conference on Multidisciplinary Innovations for Smart & Sustainable Future</h1>
         <h2>MISSF 2026</h2>
@@ -410,7 +427,8 @@
         <p>Organized by IEEE Student Branch (STB60210245)</p>
         <p>SVKM's Institute of Technology, Dhule, Maharashtra, India</p>
         <p class="ieee-info-box">
-            All registered and presented conference papers will be submitted to IEEE for possible inclusion in IEEE Xplore (Scopus-indexed), subject to meeting IEEE Xplore's scope and quality requirements.
+            All registered and presented conference papers will be submitted to IEEE for possible inclusion in IEEE
+            Xplore (Scopus-indexed), subject to meeting IEEE Xplore's scope and quality requirements.
         </p>
 
         <div class="button-container">
@@ -526,7 +544,7 @@
         <h2>Keynote Speakers</h2>
 
         <div class="keynote-grid">
-       
+
 
 
             <div class="person-card">
@@ -565,11 +583,11 @@
                 <p>SEA College, Bengaluru</p>
             </div>
             <div class="person-card">
-                <img src="static/Images/manoj.png" >
+                <img src="static/Images/manoj.png">
                 <h3>Manoj Parasa</h3>
                 <p>Senior SAP Successfactors Consultant</p>
                 <p>Ernst & Young
-Dallas, USA</p>
+                    Dallas, USA</p>
             </div>
             <div class="person-card">
                 <img src="static/Images/Gurmender.png" style="object-position: center top;">
@@ -578,12 +596,17 @@ Dallas, USA</p>
                 <p>Davies, London ,UK</p>
             </div>
             <div class="person-card">
-    <img src="static/Images/Ravi_kiran_Gadiraju.jpeg">
-    <h3>Mr. Ravi Kiran Gadiraju</h3>
-    <p>Sr. Advisor – Product Management</p>
-   
-</div>
+                <img src="static/Images/Ravi_kiran_Gadiraju.jpeg">
+                <h3>Mr. Ravi Kiran Gadiraju</h3>
+                <p>Sr. Advisor – Product Management</p>
 
+            </div>
+            <div class="person-card">
+                <img src="static/Images/Nanda Manchukonda.jpeg">
+                <h3>Nanda Manchukonda</h3>
+                <p>Product Cost Analyst</p>
+                <p>MS Info Tech LLC, USA</p>
+            </div>
 
         </div>
     </section>
@@ -593,11 +616,11 @@ Dallas, USA</p>
         <img src="static/Images/ieee2.png" alt="IEEE Logo">
     </section>
     <section style="padding:25px;text-align:center;font-size:15px;background:#f8f8f8;">
-<b>CMT Acknowledgment</b><br><br>
-The Microsoft CMT service was used for managing the peer-reviewing process for this conference.
-This service was provided for free by Microsoft and they bore all expenses, including costs for
-Azure cloud services as well as for software development and support.
-</section>
+        <b>CMT Acknowledgment</b><br><br>
+        The Microsoft CMT service was used for managing the peer-reviewing process for this conference.
+        This service was provided for free by Microsoft and they bore all expenses, including costs for
+        Azure cloud services as well as for software development and support.
+    </section>
 
     <footer>
         <p>&copy; 2026 MISSF Conference | Organized by SVKM's Institute of Technology, Dhule</p>
@@ -614,4 +637,5 @@ Azure cloud services as well as for software development and support.
         }
     </script>
 </body>
+
 </html>
