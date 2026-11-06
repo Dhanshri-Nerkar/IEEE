@@ -14,28 +14,40 @@
 
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
         }
 
+        /* HEADER */
         header {
-            background-color: white;
+            background-color: #ffffff;
             color: #002855;
-            padding: 15px 30px;
-            text-align: center;
+            padding: 15px 5%;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
+            gap: 15px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
+        .header-logos {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         header img {
-            height: 70px;
-            margin: 0 20px;
+            height: 60px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
             transition: transform 0.3s ease;
         }
 
@@ -44,24 +56,27 @@
         }
 
         nav {
-            padding: 10px;
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 5px 0;
         }
 
         nav a {
             color: #002855;
-            margin: 15px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 20px;
-            transition: color 0.3s;
+            font-size: 16px;
+            transition: color 0.3s ease;
             position: relative;
+            padding: 5px 0;
         }
 
         nav a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: 0;
             left: 0;
             width: 0;
             height: 2px;
@@ -77,18 +92,19 @@
             color: #0047AB;
         }
 
+        /* HERO SECTION */
         .hero {
             position: relative;
-            height: 75vh;
+            min-height: 75vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            text-shadow: 2px 2px 5px black;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
             font-weight: bold;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         .hero::before {
@@ -106,23 +122,49 @@
         .hero h1,
         .hero h2,
         .hero p {
-            margin: 10px 0;
+            margin: 8px 0;
             font-family: "Times New Roman", Times, serif;
         }
 
         .hero h1 {
-            font-size: 40px;
+            font-size: clamp(24px, 4vw, 40px);
             line-height: 1.3;
+            max-width: 1000px;
         }
 
         .hero h2 {
-            font-size: 30px;
+            font-size: clamp(20px, 3.5vw, 30px);
             color: #FFD700;
         }
 
         .hero p {
-            font-size: 22px;
+            font-size: clamp(16px, 2.5vw, 22px);
             font-weight: bold;
+        }
+
+        .conference-number {
+            font-size: clamp(15px, 2vw, 20px);
+            color: #FFD700;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px 0;
+            max-width: 100%;
+            word-break: break-word;
+        }
+
+        .ieee-info-box {
+            background-color: rgba(0, 0, 0, 0.65);
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: clamp(14px, 2vw, 18px);
+            max-width: 900px;
+            margin: 20px auto;
+            line-height: 1.5;
+            text-shadow: none;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
         }
 
         .button-container {
@@ -131,6 +173,7 @@
             margin-top: 20px;
             flex-wrap: wrap;
             justify-content: center;
+            width: 100%;
         }
 
         .hero button {
@@ -143,40 +186,36 @@
             border-radius: 8px;
             font-weight: bold;
             transition: all 0.3s ease-in-out;
+            min-width: 180px;
         }
 
         .hero button:hover {
-            background-color: gold;
+            
+            background-color:#gold;
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+            box-shadow:0 6px 20px rgba(255, 215, 0, 0.5);
         }
 
+        /* SPEAKERS & SECTIONS */
         .speakers,
         .association {
             text-align: center;
-            padding: 50px 20px;
-            background: white;
+            padding: 60px 20px;
+            background: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .speakers:nth-child(even) {
             background-color: #fafafa;
         }
 
-        h1,
-        h2,
-        h3,
-        p {
-            margin-top: 6px;
-            margin-bottom: 6px;
-        }
-
         .speakers h2,
         .association h2 {
             font-family: "Times New Roman", Times, serif;
-            font-size: 36px;
+            font-size: clamp(26px, 4vw, 36px);
             color: #002855;
             font-weight: bold;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             text-transform: uppercase;
             position: relative;
             display: inline-block;
@@ -194,46 +233,9 @@
             background-color: #FFD700;
         }
 
-        .speaker img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .association {
-            padding: 60px 20px;
-        }
-
-        .association img {
-            width: 220px;
-            margin-top: 20px;
-        }
-
-        footer {
-            background-color: #002855;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-
-        .speaker-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .speaker h3 {
-            margin-top: 15px;
-            font-size: 18px;
-            color: #002855;
-        }
-
-        .people-grid {
+        /* GRIDS */
+        .people-grid,
+        .keynote-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 30px;
@@ -241,7 +243,7 @@
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
-            padding: 0 20px;
+            justify-content: center;
         }
 
         .person-card {
@@ -251,28 +253,11 @@
             box-shadow: 0px 4px 15px rgba(0, 40, 85, 0.1);
             transition: all 0.3s ease;
             border-top: 3px solid transparent;
-        }
-
-        .keynote-center {
-            justify-self: center;
-            width: 100%;
-            max-width: 240px;
-        }
-
-        .keynote-grid {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 25px;
-            max-width: 1080px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .keynote-grid .person-card {
-            flex: 0 0 calc(25% - 30px);
-            max-width: 240px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100%;
         }
 
         .person-card:hover {
@@ -281,22 +266,16 @@
             border-top-color: #FFD700;
         }
 
-        .speakers {
-            border-bottom: 1px solid #e0e0e0;
-        }
-
         .person-card img {
             width: 160px;
             height: 160px;
             border-radius: 50%;
             object-fit: cover;
+            object-position: center top;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
-        }
-
-        .person-card img {
-            object-fit: cover;
-            object-position: center;
+            background: #fff;
+            margin-bottom: 15px;
         }
 
         .person-card:hover img {
@@ -304,98 +283,85 @@
         }
 
         .person-card h3 {
-            margin-top: 15px;
             font-size: 19px;
             font-weight: bold;
             color: #002855;
+            margin-bottom: 6px;
         }
 
         .person-card p {
             font-size: 15px;
-            margin: 4px 0;
+            margin: 3px 0;
             color: #555;
+            line-height: 1.4;
         }
 
         .person-card p:first-of-type {
             font-weight: bold;
             color: #0047AB;
-            margin-top: 8px;
+            margin-top: 4px;
         }
 
-        .ieee-info-box {
-            background-color: rgba(0, 0, 0, 0.55);
-            padding: 12px 18px;
-            border-radius: 8px;
-            font-size: 18px;
-            max-width: 900px;
-            margin: 20px auto;
+        /* ASSOCIATION */
+        .association img {
+            width: min(220px, 80%);
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* CMT SECTION */
+        .cmt-section {
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 15px;
+            background: #f8f8f8;
+            line-height: 1.6;
+        }
+
+        .cmt-section div {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #002855;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
             line-height: 1.5;
         }
 
-        .conference-number {
-            font-size: 20px;
-            color: #FFD700;
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 10px 20px;
-            border-radius: 8px;
-            display: inline-block;
-            margin: 10px 0;
+        /* RESPONSIVE MEDIA QUERIES */
+        @media (max-width: 900px) {
+            header {
+                justify-content: center;
+            }
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 15px;
-            }
-
+        @media (max-width: 600px) {
             header img {
-                height: 60px;
-                margin: 10px 0;
+                height: 45px;
             }
 
             nav a {
-                font-size: 16px;
-                margin: 8px;
+                font-size: 15px;
             }
-
-            .hero h1 {
-                font-size: 28px;
-            }
-
-            .hero h2 {
-                font-size: 24px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .speakers h2,
-            .association h2 {
-                font-size: 28px;
-            }
-
-            .people-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            /* ===== KEYNOTE FORCE SINGLE ROW ===== */
-            /* Center last keynote card */
-            /* Center last keynote card in grid */
-
-
 
             .button-container {
                 flex-direction: column;
-                width: 100%;
-                gap: 15px;
+                align-items: center;
             }
 
             .hero button {
                 width: 100%;
-                max-width: 300px;
+                max-width: 280px;
+            }
+            
+            .people-grid, 
+            .keynote-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
         }
     </style>
@@ -407,47 +373,46 @@
 
         <nav>
             <a href="index.html">Home</a>
-            
             <a href="committee.html">Committee</a>
             <a href="session-chair.html">Session Chairs</a>
             <a href="key-dates.html">Key Dates</a>
             <a href="call-for-papers.html">Call for Papers</a>
-            <!-- <a href="https://ieeexplore.ieee.org/xpl/conhome/11521066/proceeding">Past Events</a> -->
             <a href="registration.html">Registration</a>
             <a href="contact.html">Contact Us</a>
             <a href="venue.html">Venue</a>
-            <a href="https://ieeexplore.ieee.org/xpl/conhome/11521066/proceeding">Past Events</a>
+            <a href="https://ieeexplore.ieee.org/xpl/conhome/11521066/proceeding" target="_blank">Past Events</a>
         </nav>
-        <img src="static/Images/SNGU.png" alt="SNGU Logo">
-        <img src="static/Images/svkm-logo.png" alt="SVKM Logo">
-        
+
+        <div class="header-logos">
+            <img src="static/Images/SNGU.png" alt="SNGU Logo">
+            <img src="static/Images/svkm-logo.png" alt="SVKM Logo">
+        </div>
     </header>
 
     <div class="hero">
         <h1>2<sup>nd</sup> International Conference on Multidisciplinary Innovations for Smart & Sustainable Future</h1>
         <h2>MISSF 2027</h2>
+        
         <p class="conference-number">
             IEEE Conference Record No: <strong>#73856</strong>
         </p>
+        
         <p>(Hybrid Mode)</p>
         <p>26<sup>th</sup> - 27<sup>th</sup> February 2027</p>
         <p>Organized by IEEE Student Branch (STB60210245)</p>
         <p>SVKM NMIMS GLOBAL UNIVERSITY</p>
         <p>School of Technology Management & Engineering</p>
-
-
-
         <p>(Formerly SVKM's Institute of Technology, Dhule, Maharashtra, India)</p>
-        <p class="ieee-info-box">
+        
+        <div class="ieee-info-box">
             All registered and presented conference papers will be submitted to IEEE for possible inclusion in IEEE
             Xplore (Scopus-indexed), subject to meeting IEEE Xplore's scope and quality requirements.
-        </p>
+        </div>
 
         <div class="button-container">
             <a href="https://cmt3.research.microsoft.com/MISSF2027/Submission/Index" target="_blank">
                 <button type="button">Submit Paper</button>
             </a>
-
             <a href="static/documents/MISSF 2026 (2).pdf" download>
                 <button type="button">Download Brochure</button>
             </a>
@@ -456,19 +421,9 @@
 
     <section class="speakers">
         <h2>Chief Guest</h2>
-
         <div class="people-grid">
             <div class="person-card">
-                <img src="static/Images/.png" style="
-                width:180px;
-                height:200px;
-                border-radius:50%;
-                object-fit:cover;
-                object-position:center top;
-                box-shadow:0px 5px 15px rgba(0,0,0,0.2);
-                background:#fff;
-                ">
-
+                <img src="static/Images/.png" alt="Chief Guest Placeholder">
                 <!-- <h3>Dr. S. C. Choube</h3> -->
                 <!-- <p>Vice-Chancellor</p> -->
                 <!-- <p>RGPV, Bhopal</p> -->
@@ -478,160 +433,43 @@
 
     <section class="speakers">
         <h2>Guests of Honour</h2>
-
         <div class="people-grid">
-
-            <!-- <div class="person-card">
-                <img src="static/Images/Preeti.png" style="
-                width:180px;
-                height:190px;
-                border-radius:50%;
-                object-fit:cover;
-                object-position:center top;
-                box-shadow:0px 5px 15px rgba(0,0,0,0.2);
-                background:#fff;
-                ">
+            <!-- 
+            <div class="person-card">
+                <img src="static/Images/Preeti.png" alt="Prof. (Dr.) Preeti Bajaj">
                 <h3>Prof. (Dr.) Preeti Bajaj</h3>
                 <p>Director</p>
                 <p>Chair Elect, IEEE India Council</p>
             </div>
-
-            <div class="person-card">
-                <img src="static/Images/Dr._L._D._Arya.png" style="
-                width:180px;
-                height:190px;
-                border-radius:50%;
-                object-fit:cover;
-                object-position:center top;
-                box-shadow:0px 5px 15px rgba(0,0,0,0.2);
-                background:#fff;
-                ">
-                <h3>Prof. (Dr.) L. D. Arya</h3>
-                <p>Professor (Retd.)</p>
-                <p>SGSITS, Indore</p>
-            </div> -->
-
+            -->
         </div>
     </section>
 
     <section class="speakers">
         <h2>Special Guests</h2>
-
         <div class="people-grid">
-
-            <!-- <div class="person-card">
-                <img src="static/Images/sameer.png" style="
-                width:180px;
-                height:190px;
-                border-radius:50%;
-                object-fit:cover;
-                object-position:center top;
-                box-shadow:0px 5px 15px rgba(0,0,0,0.2);
-                background:#fff;
-                ">
+            <!-- 
+            <div class="person-card">
+                <img src="static/Images/sameer.png" alt="Dr. Sameer Naniwadekar">
                 <h3>Dr. Sameer Naniwadekar</h3>
                 <p>Chair</p>
                 <p>IEEE Maharashtra Section</p>
             </div>
-
-            <div class="person-card">
-                <img src="static/Images/gajare.png" style="
-                width:180px;
-                height:190px;
-                border-radius:50%;
-                object-fit:cover;
-                object-position:center top;
-                box-shadow:0px 5px 15px rgba(0,0,0,0.2);
-                background:#fff;
-                ">
-                <h3>Dr. Suhas Gajare</h3>
-                <p>Principal</p>
-                <p>Govt. College of Engineering, Jalgaon</p>
-            </div> -->
-
+            -->
         </div>
     </section>
 
     <section class="speakers">
         <h2>Keynote Speakers</h2>
-
         <div class="keynote-grid">
-
-
-
-            <!-- <div class="person-card">
-                <img src="static/Images/Dr. R. C. Bansal.jpg">
+            <!-- 
+            <div class="person-card">
+                <img src="static/Images/Dr. R. C. Bansal.jpg" alt="Dr. R. C. Bansal">
                 <h3>Dr. R. C. Bansal</h3>
                 <p>Professor</p>
                 <p>University of Sharjah, UAE</p>
             </div>
-
-            <div class="person-card">
-                <img src="static/Images/saurabh.png">
-                <h3>Mr. Sourabh S. Rajput</h3>
-                <p>Sr. Software Engineer</p>
-                <p>Randstad Digital, USA</p>
-            </div>
-
-            <div class="person-card">
-                <img src="static/Images/Sharavan.png">
-                <h3>Mr. Sarvanan Raj</h3>
-                <p>Sr. Product Manager</p>
-                <p>Axon, Seattle, USA</p>
-            </div>
-
-            <div class="person-card">
-                <img src="static/Images/DR Usha.png" style="
-                width:180px;
-                height:180px;
-                border-radius:50%;
-                object-fit:cover;
-                object-position:center top;
-                box-shadow:0px 5px 15px rgba(0,0,0,0.2);
-                background:#fff;
-                ">
-                <h3>Dr. Usha Desai</h3>
-                <p>Dean (R&amp;D)</p>
-                <p>SEA College, Bengaluru</p>
-            </div>
-            <div class="person-card">
-                <img src="static/Images/manoj.png">
-                <h3>Manoj Parasa</h3>
-                <p>Senior SAP Successfactors Consultant</p>
-                <p>Ernst & Young
-                    Dallas, USA</p>
-            </div>
-            <div class="person-card">
-                <img src="static/Images/Gurmender.png" style="object-position: center top;">
-                <h3>Gurmender Atwal</h3>
-                <p>AI Researcher</p>
-                <p>Davies, London ,UK</p>
-            </div>
-            <div class="person-card">
-                <img src="static/Images/Ravi_kiran_Gadiraju.jpeg">
-                <h3>Mr. Ravi Kiran Gadiraju</h3>
-                <p>Sr. Advisor – Product Management</p>
-
-            </div>
-            <div class="person-card">
-                <img src="static/Images/Nanda Manchukonda.jpeg">
-                <h3>Nanda Manchukonda</h3>
-                <p>Product Cost Analyst</p>
-                <p>MS Info Tech LLC, USA</p>
-            </div>
-            <div class="person-card">
-                <img src="static/Images/Vijayachandar Sanikal.jpeg">
-                <h3>Vijayachandar Sanikal</h3>
-                <p>Thermal Simulation Integration Engineer | Product Owner – AI Simulation, General Motors, USA.</p>
-                <p>Senior Member IEEE, Michigan, USA.</p>
-            </div>
-            <div class="person-card">
-                <img src="static/Images/Screenshot 2026-04-02 224257.png">
-                <h3>Jagadeesh Sundaramoorthy</h3>
-                <p> Independent reasercher, USA</p>
-                <p></p>
-            </div> -->
-
+            -->
         </div>
     </section>
 
@@ -639,11 +477,14 @@
         <h2>In Association With</h2>
         <img src="static/Images/ieee2.png" alt="IEEE Logo">
     </section>
-    <section style="padding:25px;text-align:center;font-size:15px;background:#f8f8f8;">
-        <b>CMT Acknowledgment</b><br><br>
-        The Microsoft CMT service was used for managing the peer-reviewing process for this conference.
-        This service was provided for free by Microsoft and they bore all expenses, including costs for
-        Azure cloud services as well as for software development and support.
+
+    <section class="cmt-section">
+        <div>
+            <b>CMT Acknowledgment</b><br><br>
+            The Microsoft CMT service was used for managing the peer-reviewing process for this conference.
+            This service was provided for free by Microsoft and they bore all expenses, including costs for
+            Azure cloud services as well as for software development and support.
+        </div>
     </section>
 
     <footer>
@@ -653,7 +494,7 @@
     <script>
         function downloadBrochure() {
             const link = document.createElement('a');
-            link.href = 'brochure.pdf';
+            link.href = 'static/documents/MISSF 2026 (2).pdf';
             link.download = 'IEEE_Conference_Brochure.pdf';
             document.body.appendChild(link);
             link.click();
