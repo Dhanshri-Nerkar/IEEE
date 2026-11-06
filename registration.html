@@ -18,30 +18,76 @@
         /* Header Styles */
         header {
             background-color: white; /* Changed to white */
-            color:  #002855; /* Dark blue for text */
-            padding: 15px;
+            color: #002855; /* Dark blue for text */
+            padding: 15px 25px;
             text-align: center;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            gap: 15px;
+            flex-wrap: wrap;
         }
         header img {
-            height: 70px; /* Increased logo size */
-            margin: 0 20px;
+            height: 65px;
+            margin: 0 10px;
+            vertical-align: middle;
         }
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* ======================================================== */
+        /* START: LOGIN / SIGN UP BUTTON STYLES                     */
+        /* ======================================================== */
+        .btn-auth {
+            display: inline-block;
+            padding: 9px 20px;
+            background-color: transparent;
+            color: #002855;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid #002855;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .btn-auth:hover {
+            background-color: #ffcc00;
+            border-color: #ffcc00;
+            color: #000000;
+            text-decoration: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+        }
+        /* ======================================================== */
+        /* END: LOGIN / SIGN UP BUTTON STYLES                       */
+        /* ======================================================== */
+
         nav {
             padding: 10px;
             text-align: center;
+            flex: 1;
         }
         nav a {
             color: #002855; /* Dark blue for text */
-            margin: 10px;
+            margin: 8px 12px;
             text-decoration: none;
             font-weight: bold;
             font-family: Arial, sans-serif;
-            font-size: 20px; /* Increased font size */
+            font-size: 18px;
             transition: color 0.3s;
+            display: inline-block;
         }
         nav a:hover {
             color: #0047AB; /* Lighter blue on hover */
@@ -50,7 +96,7 @@
         /* Registration Section Styles */
         .registration {
             text-align: center;
-            padding: 50px;
+            padding: 50px 20px;
             background: #f9f9f9;
         }
         .registration h2 {
@@ -75,9 +121,10 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             text-align: left;
+            box-sizing: border-box;
         }
         .registration-details h3 {
-            color:  #002855;
+            color: #002855;
             font-size: 24px;
             margin-bottom: 15px;
         }
@@ -119,6 +166,10 @@
             border-radius: 5px;
             margin: 20px 0;
             transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
         }
         .button:hover {
             background-color: #e6b800;
@@ -135,7 +186,7 @@
             font-size: 18px;
         }
         th {
-            background-color:  #002855;
+            background-color: #002855;
             color: white;
             font-weight: bold;
         }
@@ -145,92 +196,403 @@
         tr:hover {
             background-color: #f1f1f1;
         }
-/* Payment Account Details */
-.payment-details {
-    margin-top: 40px;
-    padding: 25px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        tr.active-category-row {
+            background-color: #fff8d6 !important;
+            font-weight: bold;
+        }
 
-.payment-details h3 {
-    text-align: center;
-    color: #002855;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
+        /* Payment Details */
+        .payment-details {
+            margin-top: 40px;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-.payment-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 15px;
-}
+        .payment-details h3 {
+            text-align: center;
+            color: #002855;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
 
-.payment-table th,
-.payment-table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    font-size: 18px;
-}
+        /* Delegate Registration Form Styles */
+        .registration-form-container {
+            margin-top: 30px;
+            padding: 25px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
 
-.payment-table th {
-    background-color: #002855;
-    color: white;
-    width: 40%;
-}
+        .form-row {
+            margin-bottom: 20px;
+        }
 
-.ifsc-note {
-    font-size: 17px;
-    color: #b30000;
-    margin: 15px 0;
-    font-weight: bold;
-}
+        .form-row label {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            color: #002855;
+            margin-bottom: 8px;
+        }
 
-.qr-section,
-.alt-payment {
-    text-align: center;
-    margin: 20px 0;
-}
+        .form-row label .required {
+            color: #b30000;
+        }
 
-.qr-section img,
-.alt-payment img {
-    max-width: 300px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
+        .form-row .counter-hint {
+            font-size: 13px;
+            color: #666;
+            font-weight: normal;
+            float: right;
+        }
 
-.or-separator {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    color: #002855;
-    margin: 15px 0;
-}
+        .form-row input[type="text"],
+        .form-row input[type="tel"],
+        .form-row select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background: #fff;
+            outline: none;
+            transition: border-color 0.3s;
+        }
 
-.payment-note,
-.payment-confirmation {
-    font-size: 18px;
-    margin-top: 15px;
-    line-height: 1.6;
-}
+        .form-row input[type="text"]:focus,
+        .form-row input[type="tel"]:focus,
+        .form-row select:focus {
+            border-color: #002855;
+            box-shadow: 0 0 5px rgba(0, 40, 85, 0.2);
+        }
+
+        .form-row input.input-invalid,
+        .form-row select.input-invalid {
+            border-color: #b30000 !important;
+            background-color: #fff5f5 !important;
+        }
+
+        .phone-input-wrap {
+            position: relative;
+        }
+
+        .phone-prefix {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+            pointer-events: none;
+        }
+
+        .phone-input-wrap input {
+            padding-left: 50px !important;
+        }
+
+        .error-text {
+            display: none;
+            color: #b30000;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 6px;
+        }
+
+        .error-text.show {
+            display: block;
+        }
+
+        .input-help {
+            font-size: 13px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .error-summary-alert {
+            display: none;
+            background-color: #fff5f5;
+            border: 1px solid #ffcccc;
+            border-left: 5px solid #b30000;
+            padding: 12px 15px;
+            border-radius: 4px;
+            color: #b30000;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .error-summary-alert.show {
+            display: block;
+        }
+
+        .error-summary-alert ul {
+            margin: 6px 0 0 20px;
+            padding: 0;
+        }
+
+        /* Success Display Section */
+        .registration-success-box {
+            display: none;
+            background: #ffffff;
+            border: 2px solid #ffcc00;
+            border-radius: 8px;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            font-family: Arial, sans-serif;
+        }
+
+        .registration-success-box.show {
+            display: block;
+        }
+
+        .success-checkmark {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ffcc00;
+            color: #002855;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+
+        .registration-success-box h4 {
+            color: #002855;
+            font-size: 24px;
+            margin: 0 0 10px 0;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .registration-success-box p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .reg-id-badge {
+            display: inline-block;
+            background: #f1f1f1;
+            padding: 6px 14px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 15px;
+            color: #002855;
+            margin-bottom: 20px;
+        }
+
+        .reg-id-badge strong {
+            font-family: monospace;
+            font-size: 16px;
+        }
+
+        .summary-info-table {
+            width: 100%;
+            max-width: 650px;
+            margin: 0 auto 25px;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .summary-info-table td {
+            padding: 10px 14px;
+            border: 1px solid #eee;
+            font-size: 15px;
+        }
+
+        .summary-info-table td.label-cell {
+            background-color: #f9f9f9;
+            color: #555;
+            font-weight: bold;
+            width: 40%;
+        }
+
+        .summary-info-table td.val-cell {
+            color: #002855;
+            font-weight: bold;
+        }
+
+        /* ======================================================== */
+        /* START: RAZORPAY "PAY FEES" BUTTON STYLES                 */
+        /* (Pure CSS styling for the Razorpay button)               */
+        /* ======================================================== */
+        .razorpay-action-wrapper {
+            margin: 25px auto 15px;
+            max-width: 500px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .razorpay-action-wrapper p {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .btn-razorpay {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #0c2340;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 13px 36px;
+            border: 2px solid #0c2340;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(12, 35, 64, 0.2);
+            transition: all 0.2s ease-in-out;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-razorpay:hover {
+            background-color: #173860;
+            border-color: #173860;
+            box-shadow: 0 6px 14px rgba(12, 35, 64, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .btn-razorpay:active {
+            transform: translateY(1px);
+        }
+
+        .btn-razorpay .rzp-badge {
+            background-color: #3395ff;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 6px;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        /* ======================================================== */
+        /* END: RAZORPAY "PAY FEES" BUTTON STYLES                   */
+        /* ======================================================== */
+
+        .btn-reset-form {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 18px;
+            background-color: #ffffff;
+            color: #333;
+            font-size: 13px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-reset-form:hover {
+            background-color: #f1f1f1;
+        }
 
         /* Footer Styles */
         footer {
-            background-color:  #002855;
+            background-color: #002855;
             color: white;
             text-align: center;
             padding: 15px;
             margin-top: 40px;
             font-size: 0.9rem;
         }
+
+        /* Responsive Layout for Mobile Users */
+        @media (max-width: 900px) {
+            .registration-details {
+                width: 95%;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px 10px;
+            }
+            .header-left, .header-right {
+                justify-content: center;
+            }
+            header img {
+                height: 50px;
+                margin: 5px;
+            }
+            nav a {
+                font-size: 16px;
+                margin: 5px 8px;
+                display: inline-block;
+            }
+            .btn-auth {
+                padding: 7px 16px;
+                font-size: 14px;
+                margin-top: 6px;
+            }
+            .registration {
+                padding: 30px 10px;
+            }
+            .registration h2 {
+                font-size: 24px;
+            }
+            .registration p {
+                font-size: 16px;
+            }
+            .registration-details h3 {
+                font-size: 20px;
+            }
+            .registration-details ul li,
+            .registration-details ol li {
+                font-size: 16px;
+            }
+            .table-responsive {
+                overflow-x: auto;
+                width: 100%;
+            }
+            table {
+                min-width: 580px;
+            }
+            th, td {
+                font-size: 15px;
+                padding: 8px;
+            }
+            .button {
+                width: 100%;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            .btn-razorpay {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="static/Images/ieee-logo.png" alt="IEEE Logo">
+        <div class="header-left">
+            <img src="static/Images/ieee-logo.png" alt="IEEE Logo">
+        </div>
+
         <nav>
-          <a href="index.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="committee.html">Committee</a>
             <a href="session-chair.html">Session Chairs</a>
             <a href="key-dates.html">Key Dates</a>
@@ -241,16 +603,28 @@
             <a href="venue.html">Venue</a>
             <a href="https://ieeexplore.ieee.org/xpl/conhome/11521066/proceeding">Past Events</a>
         </nav>
-        <img src="static/Images/SNGU.png" alt="SNGU Logo">
-        <img src="static/Images/svkm-logo.png" alt="SVKM Logo">
+
+        <div class="header-right">
+            <img src="static/Images/SNGU.png" alt="SNGU Logo">
+            <img src="static/Images/svkm-logo.png" alt="SVKM Logo">
+
+            <!-- ======================================================== -->
+            <!-- START: LOGIN / SIGN UP BUTTON                            -->
+            <!-- (Hook up your user authentication / modal / link here)   -->
+            <!-- ======================================================== -->
+            <a href="#login" class="btn-auth" id="header-auth-btn">Login / Sign Up</a>
+            <!-- ======================================================== -->
+            <!-- END: LOGIN / SIGN UP BUTTON                              -->
+            <!-- ======================================================== -->
+        </div>
     </header>
 
     <!-- Registration Section -->
     <section class="registration">
-        <h2>Registration</h2> <!-- Updated to Times New Roman -->
+        <h2>Registration</h2>
         <p>Secure Your Spot for MISSF 2027</p>
         <p>26<sup>th</sup> - 27<sup>th</sup> February 2027 | SVKM’s Institute of Technology, Dhule</p>
-        <a href="https://cmt3.research.microsoft.com/MISSF2026/Submission/Index" class="button">Register Now</a> <!-- Register Now button at the top and center -->
+        <a href="#registration-form-section" class="button">Register Now</a>
         
         <div class="registration-details">
             <h3>Registration Guidelines</h3>
@@ -276,127 +650,365 @@
                     <a href="static/documents/IEEE_E-Copyright_Form.pdf" download>Download IEEE E-Copyright Form</a>
                 </li>
                 <li><strong>Step 3: Payment Process</strong><br>
-                    After completing the above steps, proceed to the payment process as detailed below.
+                    After completing the above steps, proceed to the delegate registration and payment process below.
                 </li>
             </ol>
-            <!-- Payment Details Section -->
-<!-- Payment Account Details
-<div class="payment-details">
-    <h3>Payment Account Details</h3>
 
-    <table class="payment-table">
-        <tr>
-            <th>A/c Holder Name</th>
-            <td>Vishal Moyal</td>
-        </tr>
-        <tr>
-            <th>Bank Name</th>
-            <td>Bank of Baroda</td>
-        </tr>
-        <tr>
-            <th>Account Number</th>
-            <td>70990100030967</td>
-        </tr>
-        <tr>
-            <th>Branch</th>
-            <td>Khol Galli, Dhule</td>
-        </tr>
-        <tr>
-            <th>IFSC Code</th>
-            <td>BARB0DBDHLE</td>
-        </tr>
-        <tr>
-            <th>UPI ID</th>
-            <td>vishalmoyal@ibl</td>
-        </tr>
-    </table>
+            <h3>Registration Fee Structure</h3>
 
-    <p class="ifsc-note">
-        <strong>Important:</strong> Kindly note that the <strong>5<sup>th</sup> character of the IFSC code is Zero (0)</strong>.
-    </p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Registration Category</th>
+                            <th colspan="4">Indian Authors (INR)</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Early Bird Registration</th>
+                            <th colspan="2">Regular Registration</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>IEEE Member</th>
+                            <th>Non-IEEE Member</th>
+                            <th>IEEE Member</th>
+                            <th>Non-IEEE Member</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="row-academicians">
+                            <td><strong>Academicians</strong></td>
+                            <td>₹ 8,000</td>
+                            <td>₹ 9,000</td>
+                            <td>₹ 9,000</td>
+                            <td>₹ 10,000</td>
+                        </tr>
+                        <tr id="row-scholars">
+                            <td><strong>UG / PG / PhD Scholars</strong></td>
+                            <td>₹ 7,500</td>
+                            <td>₹ 8,500</td>
+                            <td>₹ 8,500</td>
+                            <td>₹ 9,500</td>
+                        </tr>
+                        <tr id="row-industry">
+                            <td><strong>Industry Person</strong></td>
+                            <td>₹ 8,500</td>
+                            <td>₹ 9,500</td>
+                            <td>₹ 9,500</td>
+                            <td>₹ 10,500</td>
+                        </tr>
+                        <tr>
+                            <th colspan="5">Foreign Authors (USD)</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Foreign Authors</strong></td>
+                            <td>$ 110</td>
+                            <td>$ 130</td>
+                            <td>$ 150</td>
+                            <td>$ 200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-    QR Code Section -->
-    <!-- <div class="qr-section">
-        <h4>Scan QR Code for Payment</h4>
-        <img src="static/Images/payment QR.png" alt="QR Code Payment">
-    </div>
+            <p><strong>Note:</strong> To avail the benefit of early bird registration, kindly register at the earliest before the date mentioned in the acceptance mail.
+            <br><br>
+            Registration fee covers conference kit and e-proceedings.</p>
 
-    </div>
+            <!-- Registration Form Section (Positioned inside .registration-details) -->
+            <div id="registration-form-section">
+                <h3>Delegate Registration Form</h3>
 
-    <p class="payment-confirmation">
-        <strong>After successful payment:</strong> You will receive a confirmation link on your
-        <strong>registered email ID</strong>. Kindly fill the form mentioned in the email
-        for payment confirmation and completion of registration.
-    </p>
-</div> -->
+                <!-- Success Confirmation Message -->
+                <div id="registration-success-box" class="registration-success-box">
+                    <div class="success-checkmark">✓</div>
+                    <h4>Registration Submitted Successfully!</h4>
+                    <p>Your details have been saved for the IEEE MISSF 2027 Conference roster.</p>
+                    
+                    <div class="reg-id-badge">
+                        Registration ID: <strong id="res-ref-id">MISSF-2027-4891</strong>
+                    </div>
 
+                    <table class="summary-info-table">
+                        <tr>
+                            <td class="label-cell">Delegate Name</td>
+                            <td class="val-cell" id="res-name">-</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Contact Number</td>
+                            <td class="val-cell" id="res-phone">-</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Category</td>
+                            <td class="val-cell" id="res-category">-</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Fee Details</td>
+                            <td class="val-cell" id="res-fee" style="color: #002855; font-size: 17px;">-</td>
+                        </tr>
+                    </table>
 
+                    <!-- ======================================================== -->
+                    <!-- START: RAZORPAY "PAY FEES" BUTTON CONTAINER              -->
+                    <!-- (Add your Razorpay Checkout script, key ID & order       -->
+                    <!-- creation logic here. No JS functionality is attached)   -->
+                    <!-- ======================================================== -->
+                    <div class="razorpay-action-wrapper" id="razorpay-container">
+                        <p>Proceed to complete your conference registration fee payment:</p>
+                        <!-- RAZORPAY BUTTON ELEMENT -->
+                        <button type="button" class="btn-razorpay" id="razorpay-pay-button">
+                            <span>Pay Fees</span>
+                            <span class="rzp-badge">Razorpay</span>
+                        </button>
+                    </div>
+                    <!-- ======================================================== -->
+                    <!-- END: RAZORPAY "PAY FEES" BUTTON CONTAINER                -->
+                    <!-- ======================================================== -->
 
- <h3>Registration Fee Structure</h3>
+                    <div>
+                        <button type="button" id="btn-reset-form" class="btn-reset-form">Register Another Person</button>
+                    </div>
+                </div>
 
-<table>
-    <tr>
-        <th rowspan="2">Registration Category</th>
-        <th colspan="4">Indian Authors (INR)</th>
-    </tr>
-    <tr>
-        <th colspan="2">Early Bird Registration</th>
-        <th colspan="2">Regular Registration</th>
-    </tr>
-    <tr>
-        <th></th>
-        <th>IEEE Member</th>
-        <th>Non-IEEE Member</th>
-        <th>IEEE Member</th>
-        <th>Non-IEEE Member</th>
-    </tr>
+                <!-- Registration Form Card -->
+                <div id="registration-form-card" class="registration-form-container">
+                    
+                    <!-- Error Summary Banner -->
+                    <div id="error-summary-alert" class="error-summary-alert">
+                        <strong>Please correct the following errors before submitting:</strong>
+                        <ul id="error-summary-list"></ul>
+                    </div>
 
-    <tr>
-        <td><strong>Academicians</strong></td>
-        <td>₹ 8,000</td>
-        <td>₹ 9,000</td>
-        <td>₹ 9,000</td>
-        <td>₹ 10,000</td>
-    </tr>
+                    <form id="delegate-form" novalidate>
+                        
+                        <!-- Full Name Field -->
+                        <div class="form-row">
+                            <label for="fullName">
+                                Name <span class="required">*</span>
+                                <span class="counter-hint">Author / Attendee Name</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                name="fullName" 
+                                placeholder="e.g. Dr. Rajesh Sharma" 
+                                required 
+                            />
+                            <div id="err-name" class="error-text">Full name is required (minimum 2 characters).</div>
+                        </div>
 
-    <tr>
-        <td><strong>UG / PG / PhD Scholars</strong></td>
-        <td>₹ 7,500</td>
-        <td>₹ 8,500</td>
-        <td>₹ 8,500</td>
-        <td>₹ 9,500</td>
-    </tr>
+                        <!-- Number Field with 10-Digit Validation -->
+                        <div class="form-row">
+                            <label for="phoneNumber">
+                                Number <span class="required">*</span>
+                                <span id="phone-counter" class="counter-hint">10 Digits (0/10)</span>
+                            </label>
+                            <div class="phone-input-wrap">
+                                <span class="phone-prefix">+91</span>
+                                <input 
+                                    type="tel" 
+                                    id="phoneNumber" 
+                                    name="phoneNumber" 
+                                    placeholder="9876543210" 
+                                    inputmode="numeric" 
+                                    maxlength="10" 
+                                    required 
+                                />
+                            </div>
+                            <div id="err-phone" class="error-text">Please enter a valid 10-digit mobile number.</div>
+                            <div class="input-help">Enter 10-digit primary contact mobile number without country code or spaces.</div>
+                        </div>
 
-    <tr>
-        <td><strong>Industry Person</strong></td>
-        <td>₹ 8,500</td>
-        <td>₹ 9,500</td>
-        <td>₹ 9,500</td>
-        <td>₹ 10,500</td>
-    </tr>
+                        <!-- Category Dropdown with options: UG / PG / PhD Scholars, Industry Person, Academicians -->
+                        <div class="form-row">
+                            <label for="category">
+                                Category <span class="required">*</span>
+                                <span class="counter-hint">Select your role</span>
+                            </label>
+                            <select id="category" name="category" required>
+                                <option value="">-- Select Category --</option>
+                                <option value="UG / PG / PhD Scholars">UG / PG / PhD Scholars</option>
+                                <option value="Industry Person">Industry Person</option>
+                                <option value="Academicians">Academicians</option>
+                            </select>
+                            <div id="err-category" class="error-text">Please select a category from the dropdown.</div>
+                        </div>
 
-    <tr>
-        <th colspan="5">Foreign Authors (USD)</th>
-    </tr>
+                        <!-- Submit Button with Minimal Styling using .button class -->
+                        <div>
+                            <button type="submit" class="button" id="btn-submit-form" style="margin: 10px 0 0 0;">
+                                Submit Registration
+                            </button>
+                        </div>
 
-    <tr>
-        <td><strong>Foreign Authors</strong></td>
-        <td>$ 110</td>
-        <td>$ 130</td>
-        <td>$ 150</td>
-        <td>$ 200</td>
-    </tr>
-</table>
+                    </form>
+                </div>
+            </div>
 
-            
-            <p><strong>Note:</strong> To avail the benefit of early bird registration, kindly register at the earliest
-        before the date mentioned in the acceptance mail.
-        <br><br>
-        Registration fee covers conference kit and e-proceedings.</p>
         </div>
     </section>
+
     <footer>
         <p>&copy; 2027 MISSF Conference | Organized by SVKM’s Institute of Technology, Dhule</p>
     </footer>
+
+    <!-- Internal JavaScript for Form Validation & State Switch -->
+    <script>
+        (function() {
+            var form = document.getElementById('delegate-form');
+            var formCard = document.getElementById('registration-form-card');
+            var successBox = document.getElementById('registration-success-box');
+
+            var nameInput = document.getElementById('fullName');
+            var phoneInput = document.getElementById('phoneNumber');
+            var categorySelect = document.getElementById('category');
+            var phoneCounter = document.getElementById('phone-counter');
+
+            var errName = document.getElementById('err-name');
+            var errPhone = document.getElementById('err-phone');
+            var errCategory = document.getElementById('err-category');
+            var errorSummary = document.getElementById('error-summary-alert');
+            var errorList = document.getElementById('error-summary-list');
+
+            var btnReset = document.getElementById('btn-reset-form');
+
+            // Fee schedule matching the table
+            var rates = {
+                'Academicians': '₹ 8,000 (Early Bird IEEE) to ₹ 10,000',
+                'UG / PG / PhD Scholars': '₹ 7,500 (Early Bird IEEE) to ₹ 9,500',
+                'Industry Person': '₹ 8,500 (Early Bird IEEE) to ₹ 10,500'
+            };
+
+            function updateCategoryHighlight() {
+                var cat = categorySelect.value;
+
+                // Highlight corresponding row in table
+                document.getElementById('row-academicians').classList.remove('active-category-row');
+                document.getElementById('row-scholars').classList.remove('active-category-row');
+                document.getElementById('row-industry').classList.remove('active-category-row');
+
+                if (cat === 'Academicians') {
+                    document.getElementById('row-academicians').classList.add('active-category-row');
+                } else if (cat === 'UG / PG / PhD Scholars') {
+                    document.getElementById('row-scholars').classList.add('active-category-row');
+                } else if (cat === 'Industry Person') {
+                    document.getElementById('row-industry').classList.add('active-category-row');
+                }
+            }
+
+            // Only allow digits in phone input
+            phoneInput.addEventListener('input', function() {
+                this.value = this.value.replace(/\D/g, '').slice(0, 10);
+                phoneCounter.textContent = '10 Digits (' + this.value.length + '/10)';
+                if (this.value.length === 10) {
+                    errPhone.classList.remove('show');
+                    phoneInput.classList.remove('input-invalid');
+                }
+            });
+
+            categorySelect.addEventListener('change', function() {
+                if (this.value) {
+                    errCategory.classList.remove('show');
+                    categorySelect.classList.remove('input-invalid');
+                }
+                updateCategoryHighlight();
+            });
+
+            // Form Submit Handling
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var errors = [];
+
+                // Reset field errors
+                errName.classList.remove('show');
+                nameInput.classList.remove('input-invalid');
+                errPhone.classList.remove('show');
+                phoneInput.classList.remove('input-invalid');
+                errCategory.classList.remove('show');
+                categorySelect.classList.remove('input-invalid');
+                errorSummary.classList.remove('show');
+                errorList.innerHTML = '';
+
+                // Validate Name
+                var nameVal = nameInput.value.trim();
+                if (!nameVal) {
+                    errName.textContent = 'Full name is required.';
+                    errName.classList.add('show');
+                    nameInput.classList.add('input-invalid');
+                    errors.push('Full name is required.');
+                } else if (nameVal.length < 2) {
+                    errName.textContent = 'Name must be at least 2 characters.';
+                    errName.classList.add('show');
+                    nameInput.classList.add('input-invalid');
+                    errors.push('Name must be at least 2 characters.');
+                }
+
+                // Validate Number (10 digits)
+                var phoneVal = phoneInput.value.trim();
+                if (!phoneVal) {
+                    errPhone.textContent = 'Contact number is required.';
+                    errPhone.classList.add('show');
+                    phoneInput.classList.add('input-invalid');
+                    errors.push('Contact number is required.');
+                } else if (phoneVal.length !== 10) {
+                    errPhone.textContent = 'Please enter a valid 10-digit number (currently ' + phoneVal.length + ' digits).';
+                    errPhone.classList.add('show');
+                    phoneInput.classList.add('input-invalid');
+                    errors.push('Please enter a valid 10-digit contact number.');
+                }
+
+                // Validate Category
+                if (!categorySelect.value) {
+                    errCategory.textContent = 'Please select a registration category.';
+                    errCategory.classList.add('show');
+                    categorySelect.classList.add('input-invalid');
+                    errors.push('Registration category is required.');
+                }
+
+                if (errors.length > 0) {
+                    errors.forEach(function(msg) {
+                        var li = document.createElement('li');
+                        li.textContent = msg;
+                        errorList.appendChild(li);
+                    });
+                    errorSummary.classList.add('show');
+                    if (!nameVal || nameVal.length < 2) {
+                        nameInput.focus();
+                    } else if (!phoneVal || phoneVal.length !== 10) {
+                        phoneInput.focus();
+                    } else {
+                        categorySelect.focus();
+                    }
+                    return;
+                }
+
+                // Successful submission: generate ID and show Success View
+                var randomNum = Math.floor(1000 + Math.random() * 9000);
+                var regId = 'MISSF-2027-' + randomNum;
+                
+                document.getElementById('res-ref-id').textContent = regId;
+                document.getElementById('res-name').textContent = nameVal;
+                document.getElementById('res-phone').textContent = '+91 ' + phoneVal;
+                document.getElementById('res-category').textContent = categorySelect.value;
+                document.getElementById('res-fee').textContent = rates[categorySelect.value] || 'As per table';
+
+                formCard.style.display = 'none';
+                successBox.classList.add('show');
+                successBox.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // Reset form handler
+            btnReset.addEventListener('click', function() {
+                form.reset();
+                phoneCounter.textContent = '10 Digits (0/10)';
+                updateCategoryHighlight();
+
+                successBox.classList.remove('show');
+                formCard.style.display = 'block';
+                formCard.scrollIntoView({ behavior: 'smooth' });
+            });
+
+        })();
+    </script>
 </body>
 </html>
