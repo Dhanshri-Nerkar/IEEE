@@ -16,28 +16,60 @@ body{
 }
 
 /* ===== HEADER ===== */
-header{
-    background:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
-    position:sticky;
-    top:0;
-    z-index:1000;
+        header {
+            background-color: rgb(173, 213, 255);
+            color: #002855;
+            padding: 15px 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+header img {
+    height: 65px;
 }
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 5px 0;
+            }
 
-header img{ height:70px; margin:0 20px; }
+        nav a {
+            color: #002855;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
 
-nav a{
-    margin:15px;
-    text-decoration:none;
-    font-weight:bold;
-    font-family:Arial;
-    font-size:18px;
-    color:#002855;
-}
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0047AB;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #0047AB;
+        }
+
 
 /* ===== FULL WIDTH SLIDER ===== */
 .slider{
