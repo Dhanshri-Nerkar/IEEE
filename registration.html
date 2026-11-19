@@ -13,41 +13,63 @@
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
-            style="text-align: justify";
         }
 
         /* Header Styles */
         header {
-            background-color: white; /* Changed to white */
-            color:  #002855; /* Dark blue for text */
-            padding: 15px;
-            text-align: center;
+            background-color: rgb(173, 213, 255);
+            color: #002855;
+            padding: 15px 5%;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            gap: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        header img {
-            height: 70px; /* Increased logo size */
-            margin: 0 20px;
-        }
-        nav {
-            padding: 10px;
-            text-align: center;
-        }
+header img {
+    height: 65px;
+}
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 5px 0;
+            }
+
         nav a {
-            color: #002855; /* Dark blue for text */
-            margin: 10px;
+            color: #002855;
             text-decoration: none;
             font-weight: bold;
-            font-family: Arial, sans-serif;
-            font-size: 20px; /* Increased font size */
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #0047AB; /* Lighter blue on hover */
+            font-size: 19px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 5px 0;
         }
 
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0047AB;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #0047AB;
+        }
+        
         /* Registration Section Styles */
         .registration {
             text-align: center;
@@ -236,10 +258,12 @@
             <a href="session-chair.html">Session Chairs</a>
             <a href="key-dates.html">Key Dates</a>
             <a href="call-for-papers.html">Call for Papers</a>
+            <!-- <a href="https://ieeexplore.ieee.org/xpl/conhome/11521066/proceeding">Past Events</a> -->
             <a href="registration.html">Registration</a>
             <a href="contact.html">Contact Us</a>
             <a href="venue.html">Venue</a>
-            <a href="https://ieeexplore.ieee.org/xpl/conhome/11521066/proceeding">Past Events</a>
+            <a href="Student-committee-members.html">Student Committee Members</a>
+            <a href="pastevents.html">Past Events</a>
         </nav>
         <img src="static/Images/SNGU.png" alt="SNGU Logo">
         <img src="static/Images/svkm-logo.png" alt="SVKM Logo">
@@ -249,18 +273,13 @@
     <section class="registration">
         <h2>Registration</h2> <!-- Updated to Times New Roman -->
         <p>Secure Your Spot for MISSF 2027</p>
-        <p>26<sup>th</sup> - 27<sup>th</sup> February 2027 | SVKM NMIMS Global University, Dhule, India</p>
+        <p>26<sup>th</sup> - 27<sup>th</sup> February 2027 | SVKM’s Institute of Technology, Dhule</p>
         <a href="https://cmt3.research.microsoft.com/MISSF2026/Submission/Index" class="button">Register Now</a> <!-- Register Now button at the top and center -->
         
         <div class="registration-details">
-            <h3>1. Prepare Your Camera-Ready Manuscript</h3>
+            <h3>Registration Guidelines</h3>
             <ul>
-                <li>The authors will have to submit a camera-ready version as per the guidelines given on the conference website on or before <strong>15<sup>th</sup> January 2027</strong>.</li>
-                <li>The camera-ready paper must strictly follow the <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener noreferrer">IEEE Template</a>.</li>
-                <li>IEEE template doesn't mean only double column and 6 pages. There are various specific parameters such as line spacing, font size, tables and figures formatting, and reference formatting to be looked into.</li>
-                <li>The number of pages in the Final Camera-ready Paper must be within 4–6 pages. The maximum number of pages per manuscript allowed is Six (6). Papers not meeting these requirements will not be considered for IEEE Xplore.</li>
-                <li>Please ensure that plagiarism of your manuscript is <strong>less than 20%</strong> (checked via standard plagiarism software such as Turnitin) before submitting the camera-ready paper to confirm inclusion in IEEE Xplore.</li> 
-                <li>Papers with plagiarism <strong>above 20% will not be forwarded for publication</strong>.</li>
+                <li>One registration covers one paper (both presentation and publication charges).</li>
                 <li>Each participant must pay the appropriate registration fees for their category.</li>
                 <li>Organizers reserve the right to reject a registration if found in violation of registration rules or to reassign participants to a category they deem fit.</li>
                 <li>Registration is non-transferable.</li>
@@ -392,7 +411,8 @@
         <td>$ 200</td>
     </tr>
 </table>
- 
+
+            
             <p><strong>Note:</strong> To avail the benefit of early bird registration, kindly register at the earliest
         before the date mentioned in the acceptance mail.
         <br><br>
@@ -400,7 +420,7 @@
         </div>
     </section>
     <footer>
-        <p>&copy; 2027 MISSF Conference | Organized by SVKM NMIMS Global University, Dhule, India.</p>
+        <p>&copy; 2027 MISSF Conference | Organized by SVKM’s Institute of Technology, Dhule</p>
     </footer>
 </body>
 </html>

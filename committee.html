@@ -22,9 +22,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: white;
+            background-color: rgb(173, 213, 255);
             /* Changed to white */
-            padding: 10px 20px;
+            padding: 15px 5%;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             font-family: Arial, sans-serif;
             /* Revert navbar font to Arial */
@@ -41,21 +41,43 @@
             object-fit: contain;
         }
 
-        .navbar nav a {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 5px 0;
+            }
+
+        nav a {
             color: #002855;
-            /* Dark blue for text */
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
-            font-size: 20px;
-            /* Increased font size */
-            transition: color 0.3s;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 5px 0;
         }
 
-        .navbar nav a:hover {
-            color: #002855;
-            /* Lighter blue on hover */
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0047AB;
+            transition: width 0.3s ease;
         }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #0047AB;
+        }
+
 
         /* Committee Section Styles */
         .committee-section {
@@ -79,7 +101,7 @@
         }
 
         .committee-card {
-            background: white;
+            background: rgb(202, 228, 255);
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -190,20 +212,21 @@
                 <a href="session-chair.html">Session Chairs</a>
                 <a href="key-dates.html">Key Dates</a>
                 <a href="call-for-papers.html">Call for Papers</a>
-
                 <a href="registration.html">Registration</a>
                 <a href="contact.html">Contact Us</a>
                 <a href="venue.html">Venue</a>
-                <a href="https://ieeexplore.ieee.org/xpl/conhome/11521066/proceeding">Past Events</a>
+                <a href="Student-committee-members.html">Student Committee Members</a>
+                <a href="pastevents.html">Past Events</a>
             </nav>
             <img src="static/Images/SNGU.png" alt="SNGU Logo" class="sngu-logo">
             <img src="static/Images/svkm-logo.png" alt="SVKM Logo" class="logo">
         </div>
     </header>
-
+    <hr style="border: none; height: 3px; background-color: #002855; margin-top:50px">
     <!-- Chief Patrons -->
     <section class="committee-section">
         <h2>Chief Patrons</h2>
+        <hr style="border: none; height: 3px; background-color: #002855;margin-top:50px; margin-bottom:50px" />
         <div class="committee-container">
             <div class="committee-card">
                 <img src="static/Images/Honble Shri Amrishbhai Patel.jpg" alt="Hon’ble Shri Amrishbhai Patel">
@@ -234,10 +257,12 @@
             </div>
         </div>
     </section>
+    <hr style="border: none; height: 3px; background-color: #002855;">
 
     <!-- Patrons -->
     <section class="committee-section">
         <h2>Patrons</h2>
+        <hr style="border: none; height: 3px; background-color: #002855; margin-bottom:50px; margin-top:50px;">
         <div class="committee-container">
             <div class="committee-card">
                 <img src="static/Images/Shri Rajgopal Bhandari.jpg" alt="Shri Rajgopal Bhandari">
@@ -260,7 +285,7 @@
                 <h3>Hon’ble </h3>
                 <h3>Dr. Ankur Kulkarni </h3>
                 <p><strong>Vice Chancellor</strong></p>
-               <p>SVKM NMIMS Global University, Dhule, India.</p>
+                <p>SVKM NMIMS Dhule Campus</p>
             </div>
 
             <div class="committee-card">
@@ -269,15 +294,18 @@
                 <h3>Dr. Nilesh Salunke</h3>
                 <p><strong>Principal</strong>, </p>
                 <p>School of Technology Management and Engineering</p>
-                <p>SVKM NMIMS Global University, Dhule, India.</p>
             </div>
 
         </div>
         </div>
         </div>
     </section>
+        <hr style="border: none; height: 3px; background-color: #002855;">
     <section class="committee-section">
-        <h2>Organizing Chair</h2>
+ 
+    <!-- Organizing Chair -->
+       <h2>Organizing Chair</h2>
+            <hr style="border: none; height: 3px; background-color: #002855; margin-top:55px;">
         <section class="committee-section">
 
             <div class="committee-container">
@@ -285,128 +313,120 @@
                 <div class="committee-card">
                     <img src="static/Images/electric_hod.png" alt="Dr. Vishal Moyal">
                     <h3>Dr. Vishal Moyal</h3>
-                    <p><strong>Head of Department</strong>, </p>
-                    <p>Electrical Engineering</p>
-                    <p>School of Technology Management and Engineering</p>
-                    <p>SVKM NMIMS Global University, Dhule, India.</p>
+                    <p><strong>HoD</strong>, Electrical Engineering</p>
                 </div>
             </div>
         </section>
-
-
-
-
+<hr style="border: none; height: 3px; background-color: #002855; margin-top:55px;">
 
     </section>
-
-    <!-- Organizing Chair -->
-
-
-
-
-    <!-- Committees Section -->
+                    <!-- Committees Section -->
     <section id="committees">
         <h2>Committees</h2>
 
         <h3>International Advisory Committee</h3>
         <ul>
-            <li>Prof. (Dr.) Tariq Abdullah, Computing & IT, College of Science and Engineering, University of Derby, U.K.</li>
-            <li>Prof. (Dr.) Ramesh C. Bansal, University of Sharjah, U.A.E.</li>
-            <li>Prof. Musa Yilmaz, University of California Riverside, U.S.A.</li>
-            <li>Mr. Shipij Rathore, Project Engineer, ABB, Sweden.</li>
+            <li>Prof. (Dr.) Tariq Abdullah, Computing & IT, College of Science and Engineering, University of Derby,
+                United Kingdom</li>
+            <li>Prof. (Dr.) Ramesh C. Bansal, University of Sharjah, UAE</li>
+            <li>Prof. Musa Yilmaz, University of California Riverside, USA</li>
+            <li>Mr. Shipij Rathore, Project Engineer, ABB, Sweden</li>
+    
         </ul>
 
         <h3>National Advisory Committee</h3>
         <ul>
-            <li>Dr. N. D. Londhe, Professor, NIT-Raipur, India.</li>
-            <li>Dr. R. N. Patel, Professor, NIT-Raipur, India.</li>
-            <li>Dr. Ankit Prakash Dubey, Associate Professor, IIT-Jammu, India.</li>
-            <li>Dr. L. D. Arya, Professor (Retd.), S.G.S.I.T.S., Indore, India.</li>
-            <li>Dr. R. S. Tare, Professor (Retd.), S.G.S.I.T.S, Indore, India.</li>
-            <li>Dr. Suresh Deshmukh, Professor, I.C.T., Mumbai, India.</li>
-            <li>Dr. Ashok Bhansali, Dean, GLA University, Mathura, India.</li>
-            <li>Dr. Amol Bhopale, Assistant Professor, IIIT-Nagpur, India.</li>
-            <li>Dr. Pragnan Chakraborty, Principal-Director, CARET, Bhilai, India.</li>
-            <li>Mr. Priyadarshi Barchhiha, AET-Leader, Hindalco Ind. Ltd., Hirakud, Odisha, India.</li>
+            <li>Dr. Avadhut Sardeshmukh, Senior Scientist, Tata Consultancy Services</li>
+            <li>Dr. L. D. Arya, Retd. Professor at SGSITS, Indore, India</li>
+            <li>Dr. R. S. Tare, Retd. Professor at SGSITS, Indore, India</li>
+            <li>Dr. Suresh Deshmukh, Professor at ICT, Mumbai, India</li>
+            <li>Dr. Pragnan Chakraborty, Principal Director, CARET, Bhilai, India</li>
+            <li>Dr. Nilanjan Dey, Associate Professor, Techno International New Town, Kolkata, India</li>
         </ul>
         <h3>Technical Program Committee</h3>
         <ul>
-            <li>Dr. Smita Nirkhi Singh, Associate Professor, Symbiosis Institute of Technology, Nagpur, India. (TPC-Chair)</li>
-            <li>Dr. Mansi Subhedar, Interim WIE Chair (Women in Engineering), IEEE Maharashtra Section.</li>
-            <li>Dr. Ramchandra Mangrulkar, Membership Development Committee Chair, Maharashtra Section.</li>
-            <li>Dr. Ranjit Kumar, Young Professional Chair, IEEE Maharashtra Section.</li>
-            <li>Prof. (Dr.) Ramesh C. Bansal, University of Sharjah, U.A.E.</li>
-            <li>Dr. Musa Yilmaz, University of California, Riverside.</li>
-            <li>Mr. Shipij Rathore, Project Engineer, ABB, Sweden.</li>
-            <li>Dr. Sudeep Sharma, Indian Institute of Information Technology, Surat, India.</li>
-            <li>Dr. Sumitkumar Gupta, Indian Institute of Information Technology, Pune, India.</li>
-            <li>Dr. Preeti Hemnani, S.I.E.S. Graduate School of Technology, Mumbai, India.</li>
-            <li>Dr. Sameer Nanivadekar, Associate Professor, A. P. Shah Institute of Technology, Thane, India.</li>
-            <li>Dr. Hashmat Fida, Presidency University, Bangalore, India.</li>
-            <li>Dr. Ashwini V. Malviya, Associate Professor, Sipna College of Engineering and Technology, Amravati, India.</li>
-            <li>Prof. Biju Balkrishnan Pillai, S.I.E.S. Graduate School of Technology, Mumbai, India.</li>
-            <li>Dr. Siddhant Gudhe, HoD, Electrical Engineering at SGGS IE & T, Nanded, India.</li>
-            <li>Dr. S. R. Sathe, Professor at VNIT, Nagpur, India.</li>
-            <li>Dr. Sandeep Kumar Soni, IIT-Bhilai, India.</li>
-            <li>Dr. Ankit Dubey, Associate Professor, IIT-Jammu, India.</li>
-            <li>Dr. Pragati Gupta, Assistant Professor, VJTI, Mumbai, India.</li>
-            <li>Dr. Laxman Thakare, G H Raisoni College of Engineering, Nagpur, India.</li>
-            <li>Dr. Prachi Palsodkar, Associate Professor, YCCE, Nagpur, India.</li>
+            <li>Dr. Smita Nirkhi – Associate Professor, Symbiosis Institute of Technology, Nagpur (Chair)</li>
+            <li>Mr. Shahid Akhtar (Publication Chair)</li>
+            <!-- <li>Dr. Tariq Abdullah – Professor at University of Derby, United Kingdom</li>
+            <!-- <li>Dr. Tariq Abdullah – Professor at University of Derby, United Kingdom</li>
+<li>Prof. (Dr.) Ramesh C. Bansal – University of Sharjah, UAE</li>
+<li>Dr. Musa Yilmaz – University of California, Riverside</li>
+<li>Mr. Shipij Rathore – Project Engineer, ABB, Sweden</li>
+<li>Dr. Rajeev Papneja – AI/ML Expert, Frederick Taylor International University, Arizona, USA</li>
+<li>Mr. Venkata Thej Deep Jakkaraju – Senior Cloud Engineer, GameStop Corp, Dallas, Texas, USA</li>
+<li>Mr. Bhasker Reddy Ande – Manager Solutions Architect | IEEE Senior Member, Ashburn, USA</li>
+<li>Mr. Pavan Kumar Adapala – Leader in SRE & AI</li>
+<li>Mr. Nanda Manchukonda – Product Cost Analyst, MS Info Tech LLC, San Ramon, CA, USA</li>
+<li>Mr. Rakesh Ramakrishnan – Senior Data Scientist, PayPal | California, USA</li>
+<li>Mr. Harshavardhan Peddireddy – Platform Architect at Meijer INC, Michigan, USA</li> -->
+            <li>Dr. Sudeep Sharma – Indian Institute of Information Technology, Surat</li>
+            <li>Dr. Sumitkumar Gupta – Indian Institute of Information Technology, Pune</li>
+            <li>Dr. Preeti Hemnani – S.I.E.S. Graduate School of Technology, Mumbai</li>
+            <li>Dr. Sameer Nanivadekar – Associate Professor, A. P. Shah Institute of Technology, Thane</li>
+            <li>Dr. Hashmat Fida – Presidency University, Bangalore</li>
+            <li>Dr. Smita Nirkhi Singh – Associate Professor, Symbiosis Institute of Technology, Nagpur</li>
+            <li>Dr. Ashwini V. Malviya – Associate Professor, Sipna College of Engineering and Technology, Amravati</li>
+            <li>Dr. Ramchandra Mangrulkar – Membership Development Committee Chair, Maharashtra Section</li>
+            <li>Prof. Biju Balkrishnan Pillai – S.I.E.S. Graduate School of Technology, Mumbai</li>
+            <li>Dr. Siddhant Gudhe – HoD, Electrical Engineering at SGGS IE & T, Nanded</li>
+            <li>Dr. S. R. Sathe – Professor at VNIT, Nagpur</li>
+            <li>Dr. Sandeep Kumar Soni – IIT Bhilai</li>
+            <li>Dr. Ankit Dubey – Associate Professor, IIT Jammu</li>
+            <li>Dr. Pragati Gupta – Assistant Professor, VJTI, Mumbai</li>
+            <li>Dr. Mansi Subhedar – Interim WIE Chair (Women in Engineering), IEEE Maharashtra Section</li>
+            <li>Dr. Ranjit Kumar – Young Professional Chair, IEEE Maharashtra Section</li>
+            <li>Dr. Rajashree Jain – Treasurer, IEEE India Council</li>
+            <li>Dr. Laxman Thakare – GH Raisoni College of Engineering, Nagpur</li>
+            <li>Dr. Prachi Palsodkar – Associate Professor, YCCE, Nagpur</li>
         </ul>
 
         <h3>Organizing Committee</h3>
         <ul>
-            <li>Dr. Sandeep Ushkewar, Convenor. </li>
-            <li>Dr. Shahid Akhtar, Publication Chair. </li>
-            <li>Dr. Rajkumar Jhapte, Treasurer.</li>
-            <li>Dr. Namra Joshi </li>
-            <li>Dr. Gaurav B. Patil </li>
-            <li>Dr. M. Ankushkumar </li>
-            <li>Dr. G. Chakrapani </li>
-            <li>Mr. Jagdish More </li>
-            <li>Mr. T. M. Shubham </li>
-            <li>Mr. Adnan Khan </li>
-            <li>Mr. Sharique Ansari </li>
-            <li>Mr. Rahul Thakur </li>
-            <li>Mr. Pankaj Bhavsar </li>
-            <li>Mr. Jayesh Patil </li>
+            <li>Dr. Rajkumar Jhapte (Associate Professor)</li>
+            <li>Dr. Gaurav B. Patil (Assistant Professor)</li>
+            <li>Dr. M. Ankushkumar (Assistant Professor)</li>
+            <li>Mr. Jagdish More (Assistant Professor)</li>
+            <li>Ms. Farha Naz (Assistant Professor)</li>
+            <li>Mr. T. M. Shubham (Assistant Professor)</li>
+            <li>Mr. G. Chakrapani (Assistant Professor)</li>
+            <li>Mr. Adnan Khan (Assistant Professor)</li>
         </ul>
 
 
-        <h3>IEEE Student Branch Office Bearers</h3>
+        <h3>Student Office Bearers</h3>
         <ul>
-            <li>Mr. Niranjan Bhadage, Chairperson</li>
-            <li>Ms. Aishwarya Wagh — Vice Chairperson</li>
-            <li>Ms. Purva Sonawane — Secretary</li>
-            <li>Mr. Shreeju Bhamre — Treasurer</li>
-            <li>Ms. Shravani Saptal — Web Master</li>
-            <li>Ms. Niranjan Bhadage — Media & Publicity Head</li>
+            <li>Niranjan Bhadage — Chairperson</li>
+            <li>Aishwarya Wagh — Vice Chairperson</li>
+            <li>Purva Sonawane — Secretary</li>
+            <li>Shreeju Bhamre — Treasurer</li>
+            <li>Shravani Saptal — Web Master</li>
+            <li>Niranjan Bhadage — Media & Publicity Head</li>
         </ul>
 
         <h3>Student Member</h3>
         <ul>
-            <li>Ms. Manasi Bhamre — President, EDC Society</li>
-            <li>Ms. Vedika Bacchav — Member</li>
-            <li>Ms. Dhanashri Chaudhari — Member</li>
-            <li>Ms. Aishwarya Wagh — Member</li>
-            <li>Ms. Mrunali Patil — Member</li>
-            <li>Ms. Shravani Saptal — Member</li>
-            <li>Ms. Bhumika Bhavre — Member</li>
-            <li>Ms. Nikita Patil — Member</li>
-            <li>Ms. Gayatri Patil — Member</li>
-            <li>Mr. Durvesh Patil — Member</li>
-            <li>Mr. Sumit Mali — Member</li>
-            <li>Mr. Deepak Deore — Member</li>
-            <li>Ms. Dhanshri Nerkar — Member</li>
-            <li>Mr. Atharva Mundke — Member</li>
-            <li>Mr. Siddharth Indasrao — Member</li>
+            <li>Manasi Bhamre — President, EDC Society</li>
+            <li>Vedika Bacchav — Member</li>
+            <li>Dhanashri Chaudhari — Member</li>
+            <li>Aishwarya Wagh — Member</li>
+            <li>Mrunali Patil — Member</li>
+            <li>Shravani Saptal — Member</li>
+            <li>Bhumika Bhavre — Member</li>
+            <li>Nikita Patil — Member</li>
+            <li>Gayatri Patil — Member</li>
+            <li>Durvesh Patil — Member</li>
+            <li>Sumit Mali — Member</li>
+            <li>Deepak Deore — Member</li>
+            <li>Dhanshri Nerkar — Member</li>
+            <li>Atharva Mundke — Member</li>
+            <li>Siddharth Indasrao — Member</li>
         </ul>
 
 
     </section>
 
     <footer>
-        <p>&copy; 2027 MISSF Conference | Organized by SVKM NMIMS Global University, Dhule</p>
+        <p>&copy; 2027 MISSF Conference | Organized by SVKM’s Institute of Technology, Dhule</p>
     </footer>
 </body>
 
