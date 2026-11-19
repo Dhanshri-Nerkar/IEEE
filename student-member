@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Committee - MISSF 2027</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(173, 213, 255);
+            /* Changed to white */
+            padding: 15px 5%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            /* Revert navbar font to Arial */
+        }
+
+        .navbar .logo {
+            height: 70px;
+            /* Increased logo size */
+        }
+
+        .navbar .sngu-logo {
+            width: 70px;
+            height: 90px;
+            object-fit: contain;
+        }
+
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 5px 0;
+            }
+
+        nav a {
+            color: #002855;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0047AB;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #0047AB;
+        }
+
+
+        /* Committee Section Styles */
+        .committee-section {
+            text-align: center;
+            padding: 1px 1px;
+        }
+
+        .committee-section h2 {
+            color: #002855;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .committee-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .committee-card {
+            background: rgb(202, 228, 255);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 100px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .committee-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .committee-card img {
+            width: 100%;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+        .committee-card h3 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #002855;
+        }
+
+        .committee-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .committee-card p strong {
+            font-weight: bold;
+            color: #002855;
+        }
+
+        /* Committees Section Styles */
+        #committees {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #committees h2 {
+            color: #002855;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        #committees h3 {
+            color: #002855;
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        #committees ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        #committees ul li {
+            background: #f8f9fa;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #002855;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* Centered Headings for Organizing Chair and Patrons */
+        #organizing-chair h2,
+        #patrons h2 {
+            text-align: center;
+            color: #004aad;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <img src="static/Images/ieee-logo.png" alt="IEEE Logo" class="logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="committee.html">Committee</a>
+                <a href="session-chair.html">Session Chairs</a>
+                <a href="key-dates.html">Key Dates</a>
+                <a href="call-for-papers.html">Call for Papers</a>
+
+                <a href="registration.html">Registration</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="venue.html">Venue</a>
+                <a href="Student-committee-members.html">Student Committee Members</a>
+                <a href="pastevents.html">Past Events</a>
+            </nav>
+            <img src="static/Images/SNGU.png" alt="SNGU Logo" class="sngu-logo">
+            <img src="static/Images/svkm-logo.png" alt="SVKM Logo" class="logo">
+        </div>
+    </header>
+    <hr style="border: none; height: 3px; background-color: #002855; margin-top:30px">
+    <!-- Chief Patrons -->
+    <section class="committee-section">
+        <h2>Student Committee Members</h2>
+        <hr style="border: none; height: 3px; background-color: #002855;margin-top:10px; margin-bottom:10px" />
+        <div class="committee-container">            
+    </section>
+
+    <section class="committee-section">
+    
+        <div class="committee-container">
+            <div class="committee-card">
+                <img src=".jpg" alt="">
+                <h3></h3>
+                <h3></h3>
+                <p><strong></strong>, </p>
+                <p></p>
+            </div>
+            <div class="committee-card">
+                <img src=".jpg"
+                    alt="">
+                <h3> </h3>
+                <h3></h3>
+                <p><strong></strong>, </p>
+                <p></p>
+            </div>
+
+            <div class="committee-card">
+                <img src="" alt="">
+                <h3></h3>
+                <h3></h3>
+                <p><strong></strong></p>
+                <p></p>
+            </div>
+
+            <div class="committee-card">
+                <img src="" alt="">
+                <h3> </h3>
+                <h3></h3>
+                <p><strong></strong>, </p>
+                <p></p>
+            </div>
+            <div class="committee-card">
+                <img src="" alt="">
+                <h3> </h3>
+                <h3></h3>
+                <p><strong></strong>, </p>
+                <p></p>
+            </div>
+                        <div class="committee-card">
+                <img src="" alt="">
+                <h3> </h3>
+                <h3></h3>
+                <p><strong></strong>, </p>
+                <p></p>
+            </div>            <div class="committee-card">
+                <img src="" alt="">
+                <h3> </h3>
+                <h3></h3>
+                <p><strong></strong>, </p>
+                <p></p>
+            </div>            <div class="committee-card">
+                <img src="" alt="">
+                <h3> </h3>
+                <h3></h3>
+                <p><strong></strong>, </p>
+                <p></p>
+            </div>            <div class="committee-card">
+                <img src="" alt="">
+                <h3> </h3>
+                <h3></h3>
+                <p><strong></strong>, </p>
+                <p></p>
+            </div>            
+            <div class="committee-card">
+                <img src="" alt="">
+                <h3> </h3>
+                <h3></h3>
+                <p><strong></strong>, </p>
+                <p></p>
+            </div>
+                        <div class="committee-card">
+                <img src="" alt="">
+                <h3> </h3>
+                <h3></h3>
+                <p><strong></strong>, </p>
+                <p></p>
+            </div>
+            
+        
+
+        </div>
+        </div>
+        </div>
+    </section>
+        <hr style="border: none; height: 3px; background-color: #002855;">
+    <section class="committee-section">
+ 
