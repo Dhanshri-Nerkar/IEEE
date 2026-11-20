@@ -22,38 +22,53 @@
             justify-content: space-between;
             align-items: center;
             background-color: rgb(173, 213, 255);
-            padding: 15px 5%;
+            padding: 12px 5%;
+            gap: 16px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             font-family: Arial, sans-serif;
         }
 
-        .navbar .logo {
-            height: 70px;
+        .navbar a {
+            display: inline-flex;
+            align-items: center;
         }
 
-        .navbar .sngu-logo {
-            width: 70px;
-            height: 90px;
+        .navbar img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .header-logos {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .header-logos img {
+            height: 60px;
+            width: auto;
             object-fit: contain;
         }
 
- 
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-                padding: 5px 0;
-            }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            padding: 4px 0;
+        }
 
         nav a {
             color: #002855;
             text-decoration: none;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 15px;
             transition: color 0.3s ease;
             position: relative;
-            padding: 5px 0;
+            padding: 4px 0;
         }
 
         nav a::after {
@@ -175,32 +190,36 @@
 </head>
 
 <body>
-       <header>
-        <a href="https://www.ieee.org/" target="_blank">
-        <img src="static/Images/ieee-logo.png" alt="IEEE Logo">
-        </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="committee.html">Committee</a>
-            <a href="session-chair.html">Session Chairs</a>
-            <a href="key-dates.html">Key Dates</a>
-            <a href="call-for-papers.html">Call for Papers</a>
-            <a href="registration.html">Registration</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="venue.html">Venue</a>
-            <a href="student-member.html">Student Committee Members</a>
-            <a href="pastevents.html">Past Events</a>
-        </nav>
+    <header>
+        <div class="navbar">
+            <a href="https://www.ieee.org/" target="_blank" rel="noopener noreferrer">
+                <img src="static/Images/ieee-logo.png" alt="IEEE Logo">
+            </a>
 
-        <div class="header-logos">
-            <a href="https://www.svkmnmimsgu.ac.in/" target="_blank">
-            <img src="static/Images/SNGU.png" alt="SNGU Logo">
-            </a>
-            <a href="https://www.svkm-iot.ac.in/" target="_blank">
-            <img src="static/Images/svkm-logo.png" alt="SVKM Logo">
-            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="committee.html">Committee</a>
+                <a href="session-chair.html">Session Chairs</a>
+                <a href="key-dates.html">Key Dates</a>
+                <a href="call-for-papers.html">Call for Papers</a>
+                <a href="registration.html">Registration</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="venue.html">Venue</a>
+                <a href="student-member.html">Student Committee Members</a>
+                <a href="pastevents.html">Past Events</a>
+            </nav>
+
+            <div class="header-logos">
+                <a href="https://www.svkmnmimsgu.ac.in/" target="_blank" rel="noopener noreferrer">
+                    <img src="static/Images/SNGU.png" alt="SNGU Logo">
+                </a>
+                <a href="https://www.svkm-iot.ac.in/" target="_blank" rel="noopener noreferrer">
+                    <img src="static/Images/svkm-logo.png" alt="SVKM Logo">
+                </a>
+            </div>
         </div>
     </header>
+
     <hr style="border: none; height: 3px; background-color: #002855; margin-top: 30px;">
 
     <section class="committee-section">
@@ -228,4 +247,5 @@
         <p>&copy; MISSF - SVKM NMIMS Global University, Dhule. All Rights Reserved.</p>
     </footer>
 </body>
+
 </html>
