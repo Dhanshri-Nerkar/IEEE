@@ -14,7 +14,6 @@
             padding: 0;
             color: #333;
             line-height: 1.6;
-
         }
 
         /* Navbar Styles */
@@ -23,16 +22,13 @@
             justify-content: space-between;
             align-items: center;
             background-color: rgb(173, 213, 255);
-            /* Changed to white */
             padding: 15px 5%;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             font-family: Arial, sans-serif;
-            /* Revert navbar font to Arial */
         }
 
         .navbar .logo {
             height: 70px;
-            /* Increased logo size */
         }
 
         .navbar .sngu-logo {
@@ -41,14 +37,13 @@
             object-fit: contain;
         }
 
-
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-                padding: 5px 0;
-            }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 5px 0;
+        }
 
         nav a {
             color: #002855;
@@ -79,17 +74,16 @@
             color: #0047AB;
         }
 
-
         /* Committee Section Styles */
         .committee-section {
             text-align: center;
-            padding: 1px 1px;
+            padding: 20px 5%;
         }
 
         .committee-section h2 {
             color: #002855;
             font-size: 2rem;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
         }
@@ -98,7 +92,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 25px;
+            margin-top: 25px;
         }
 
         .committee-card {
@@ -107,7 +102,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
             text-align: center;
-            width: 100px;
+            width: 200px; /* Increased from 100px so text fits properly */
             transition: transform 0.3s ease-in-out;
         }
 
@@ -117,67 +112,27 @@
 
         .committee-card img {
             width: 100%;
-            height: 100px;
+            height: 180px;
+            object-fit: cover;
             border-radius: 10px;
+            background-color: #e9ecef; /* Placeholder background until images are added */
         }
 
         .committee-card h3 {
-            font-size: 1.2rem;
-            margin-top: 10px;
+            font-size: 1.1rem;
+            margin: 12px 0 5px;
             color: #002855;
         }
 
         .committee-card p {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #555;
+            margin: 0;
         }
 
         .committee-card p strong {
             font-weight: bold;
             color: #002855;
-        }
-
-        /* Committees Section Styles */
-        #committees {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: #fff;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #committees h2 {
-            color: #002855;
-            font-size: 2rem;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        #committees h3 {
-            color: #002855;
-            font-size: 1.5rem;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        #committees ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0 auto;
-            max-width: 800px;
-            text-align: left;
-        }
-
-        #committees ul li {
-            background: #f8f9fa;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            font-size: 0.95rem;
-            color: #333;
         }
 
         /* Footer Styles */
@@ -188,17 +143,6 @@
             padding: 15px 0;
             margin-top: 40px;
             font-size: 0.9rem;
-        }
-
-        /* Centered Headings for Organizing Chair and Patrons */
-        #organizing-chair h2,
-        #patrons h2 {
-            text-align: center;
-            color: #004aad;
-            font-size: 2rem;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
         }
     </style>
 </head>
@@ -213,7 +157,6 @@
                 <a href="session-chair.html">Session Chairs</a>
                 <a href="key-dates.html">Key Dates</a>
                 <a href="call-for-papers.html">Call for Papers</a>
-
                 <a href="registration.html">Registration</a>
                 <a href="contact.html">Contact Us</a>
                 <a href="venue.html">Venue</a>
@@ -224,147 +167,106 @@
             <img src="static/Images/svkm-logo.png" alt="SVKM Logo" class="logo">
         </div>
     </header>
-    <hr style="border: none; height: 3px; background-color: #002855; margin-top:30px">
-    <!-- Chief Patrons -->
-    <section class="committee-section">
-        <h2>Student Committee Members</h2>
-        <hr style="border: none; height: 3px; background-color: #002855;margin-top:10px; margin-bottom:10px" />
-        <div class="committee-container">            
-    </section>
+
+    <hr style="border: none; height: 3px; background-color: #002855; margin-top: 30px;">
 
     <section class="committee-section">
-    
+        <h2>Student Committee Members</h2>
+        <hr style="border: none; height: 3px; background-color: #002855; margin-top: 10px; margin-bottom: 10px;">
+
+        <!-- Single container wrapping all cards -->
         <div class="committee-container">
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Mr. Niranjan Bhadage">
                 <h3>Chairperson</h3>
-                <p><strong>Mr. Niranjan Bhadage</strong>, </p>
+                <p><strong>Mr. Niranjan Bhadage</strong></p>
             </div>
-        <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Ms. Aishwarya Wagh">
                 <h3>Vice Chairperson</h3>
-                <p><strong>Ms. Aishwarya Wagh</strong>, </p>
+                <p><strong>Ms. Aishwarya Wagh</strong></p>
             </div>
-                    <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Ms. Purva Sonawane">
                 <h3>Secretary</h3>
-                <p><strong>Ms. Purva Sonawane</strong>, </p>
+                <p><strong>Ms. Purva Sonawane</strong></p>
             </div>
-        <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Mr. Shreeju Bhamre">
                 <h3>Treasurer</h3>
-                <p><strong>Mr. Shreeju Bhamre</strong>, </p>
+                <p><strong>Mr. Shreeju Bhamre</strong></p>
             </div>
-                    <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Ms. Shravani Saptal">
                 <h3>Web Master</h3>
-                <p><strong>Ms. Shravani Saptal</strong>, </p>
+                <p><strong>Ms. Shravani Saptal</strong></p>
             </div>
-        <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Ms. Niranjan Bhadage">
                 <h3>Media & Publicity Head</h3>
-                <p><strong>Ms. Niranjan Bhadage</strong>, </p>
+                <p><strong>Ms. Niranjan Bhadage</strong></p>
             </div>
-                    <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
-                <h3>President</h3>
-                <h3>EDC Soicety</h3>
-                <p><strong>Ms. Manasi Bhamre</strong>, </p>
+                <img src=".jpg" alt="Ms. Manasi Bhamre">
+                <h3>President<br>EDC Society</h3>
+                <p><strong>Ms. Manasi Bhamre</strong></p>
             </div>
-        <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Ms. Vedika Bacchav">
                 <h3>Member</h3>
-                <p><strong>Ms. Vedika Bacchav</strong>, </p>
+                <p><strong>Ms. Vedika Bacchav</strong></p>
             </div>
-                    <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Ms. Dhanashri Chaudhari">
                 <h3>Member</h3>
-                <p><strong>>Ms. Dhanashri Chaudhari</strong>, </p>
+                <p><strong>Ms. Dhanashri Chaudhari</strong></p>
             </div>
-        <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Ms. Aishwarya Wagh">
                 <h3>Member</h3>
-                <p><strong>Ms. Aishwarya Wagh</strong>, </p>
+                <p><strong>Ms. Aishwarya Wagh</strong></p>
             </div>
-                    <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Ms. Mrunali Patil">
                 <h3>Member</h3>
-                <p><strong>Ms. Mrunali Patil</strong>, </p>
+                <p><strong>Ms. Mrunali Patil</strong></p>
             </div>
-        <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Ms. Shravani Saptal">
                 <h3>Member</h3>
-                <p><strong>Ms. Shravani Saptal</strong>, </p>
+                <p><strong>Ms. Shravani Saptal</strong></p>
             </div>
-                    <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Ms. Bhumika Bhavre">
                 <h3>Member</h3>
-                <p><strong>Ms. Bhumika Bhavre</strong>, </p>
+                <p><strong>Ms. Bhumika Bhavre</strong></p>
             </div>
-        <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Ms. Nikita Patil">
                 <h3>Member</h3>
-                <p><strong>Ms. Nikita Patil</strong>, </p>
+                <p><strong>Ms. Nikita Patil</strong></p>
             </div>
-                    <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Ms. Gayatri Patil">
                 <h3>Member</h3>
-                <p><strong>Ms. Gayatri Patil</strong>, </p>
+                <p><strong>Ms. Gayatri Patil</strong></p>
             </div>
-        <div class="committee-container">
+
             <div class="committee-card">
-                <img src=".jpg" alt="">
+                <img src=".jpg" alt="Mr. Durvesh Patil">
                 <h3>Member</h3>
-                <p><strong>Mr. Durvesh Patil</strong>, </p>
-            </div>
-                    <div class="committee-container">
-            <div class="committee-card">
-                <img src=".jpg" alt="">
-                <h3>Member</h3>
-                <p><strong>Mr. Sumit Mali</strong>, </p>
-            </div>
-        <div class="committee-container">
-            <div class="committee-card">
-                <img src=".jpg" alt="">
-                <h3>Member</h3>
-                <p><strong>Mr. Deepak Deore</strong>, </p>
-            </div>
-                    <div class="committee-container">
-            <div class="committee-card">
-                <img src=".jpg" alt="">
-                <h3>Member</h3>
-                <p><strong>Ms. Dhanshri Nerkar</strong>, </p>
-            </div>
-        <div class="committee-container">
-            <div class="committee-card">
-                <img src=".jpg" alt="">
-                <h3>Member</h3>
-                <p><strong>Mr. Atharva Mundke</strong>, </p>
-            </div>
-                    <div class="committee-container">
-            <div class="committee-card">
-                <img src=".jpg" alt="">
-                <h3>Member</h3>
-                <p><strong>Mr. Siddharth Indasrao</strong>, </p>
-            </div>
-        </div>
-        </div>
-        </div>
-    </section>
-        <hr style="border: none; height: 3px; background-color: #002855;">
-    <section class="committee-section">
- 
+                <p><strong>Mr. Durvesh Patil</strong></p>
