@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Committee - MISSF 2027</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(173, 213, 255);
+            padding: 12px 5%;
+            gap: 16px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar a {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .navbar img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .header-logos {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .header-logos img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            padding: 4px 0;
+        }
+
+        nav a {
+            color: #002855;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 4px 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0047AB;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #0047AB;
+        }
+
+        /* Committee Section Styles */
+        .committee-section {
+            text-align: center;
+            padding: 20px 5%;
+        }
+
+        .committee-section h2 {
+            color: #002855;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .committee-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .committee-card {
+            background: rgb(202, 228, 255);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .committee-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .committee-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            background-color: #e9ecef;
+        }
+
+        .committee-card h3 {
+            font-size: 1.1rem;
+            margin: 12px 0 5px;
+            color: #002855;
+        }
+
+        .committee-card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0;
+        }
+
+        .committee-card p strong {
+            font-weight: bold;
+            color: #002855;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #002855;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a href="https://www.ieee.org/" target="_blank" rel="noopener noreferrer">
+                <img src="static/Images/ieee-logo.png" alt="IEEE Logo">
+            </a>
+
+            <nav>
+            <a href="index.html">Home</a>
+            <a href="committee.html">Committee</a>
+            <!--<a href="session-chair.html">Session Chairs</a>!-->
+            <a href="key-dates.html">Key Dates</a>
+            <a href="call-for-papers.html">Call for Papers</a>
+            <a href="registration.html">Registration</a>
+            <a href="venue.html">Venue</a>
+            <a href="student-member.html">Student Committee Members</a>
+            <a href="pastevents.html">Past Events</a>
+            <a href="contact.html">Contact Us</a>
+            </nav>
+
+            <div class="header-logos">
+                <a href="https://www.svkmnmimsgu.ac.in/" target="_blank" rel="noopener noreferrer">
+                    <img src="static/Images/SNGU.png" alt="SNGU Logo">
+                </a>
+                <a href="https://www.svkm-iot.ac.in/" target="_blank" rel="noopener noreferrer">
+                    <img src="static/Images/svkm-logo.png" alt="SVKM Logo">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <hr style="border: none; height: 3px; background-color: #002855; margin-top: 30px;">
+
+    <section class="committee-section">
+        <h2>Student Committee Members</h2>
+        <hr style="border: none; height: 3px; background-color: #002855; margin-top: 10px; margin-bottom: 10px;">
+
+        <div class="committee-container">
+            <div class="committee-card">
+                <img src=".jpg" alt="Mr. Niranjan Bhadage">
+                <h3>Chairperson</h3>
+                <p><strong>Mr. Niranjan Bhadage</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Aishwarya Wagh">
+                <h3>Vice Chairperson</h3>
+                <p><strong>Ms. Aishwarya Wagh</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Purva Sonawane">
+                <h3>Secretary</h3>
+                <p><strong>Ms. Purva Sonawane</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Mr. Shreeju Bhamre">
+                <h3>Treasurer</h3>
+                <p><strong>Mr. Shreeju Bhamre</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Shravani Saptal">
+                <h3>Web Master</h3>
+                <p><strong>Ms. Shravani Saptal</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Niranjan Bhadage">
+                <h3>Media &amp; Publicity Head</h3>
+                <p><strong>Ms. Niranjan Bhadage</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Manasi Bhamre">
+                <h3>President<br>EDC Society</h3>
+                <p><strong>Ms. Manasi Bhamre</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Vedika Bacchav">
+                <h3>Member</h3>
+                <p><strong>Ms. Vedika Bacchav</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Dhanashri Chaudhari">
+                <h3>Member</h3>
+                <p><strong>Ms. Dhanashri Chaudhari</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Aishwarya Wagh">
+                <h3>Member</h3>
+                <p><strong>Ms. Aishwarya Wagh</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Mrunali Patil">
+                <h3>Member</h3>
+                <p><strong>Ms. Mrunali Patil</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Shravani Saptal">
+                <h3>Member</h3>
+                <p><strong>Ms. Shravani Saptal</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Bhumika Bhavre">
+                <h3>Member</h3>
+                <p><strong>Ms. Bhumika Bhavre</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Nikita Patil">
+                <h3>Member</h3>
+                <p><strong>Ms. Nikita Patil</strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Ms. Gayatri Patil">
+                <h3>Member</h3>
+                <p><strong>Ms. Gayatri Patil</strong></p>
+            </div>
+            
+            <div class="committee-card">
+                <img src=".jpg" alt="Mr. Vedant Chaudhari">
+                <h3>Member</h3>
+                <p><strong>Mr. Vedant Chaudhari</strong></strong></p>
+            </div>
+            
+            <div class="committee-card">
+                <img src=".jpg" alt="Mr. Harsh Sonavane">
+                <h3>Member</h3>
+                <p><strong>Mr. Harsh Sonavane</strong></strong></p>
+            </div>
+
+            <div class="committee-card">
+                <img src=".jpg" alt="Mr. Durvesh Patil">
+                <h3>Member</h3>
+                <p><strong>Mr. Durvesh Patil</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2027 MISSF Conference | Organized by SVKM NMIMS Global University, Dhule, India.</p>
+    </footer>
+</body>
+
+</html>

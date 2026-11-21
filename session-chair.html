@@ -10,34 +10,66 @@
 /* ===== BODY ===== */
 body{
     margin:0;
-    font-family:'Times New Roman', serif;
+    font-family: Arial, sans-serif;
     background:#f4f6fb;
     color:#333;
 }
 
 /* ===== HEADER ===== */
-header{
-    background:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
-    position:sticky;
-    top:0;
-    z-index:1000;
+        header {
+            background-color: rgb(173, 213, 255);
+            color: #002855;
+            padding: 15px 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+header img {
+    height: 65px;
 }
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 5px 0;
+            }
 
-header img{ height:70px; margin:0 20px; }
+        nav a {
+            color: #002855;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
 
-nav a{
-    margin:15px;
-    text-decoration:none;
-    font-weight:bold;
-    font-family:Arial;
-    font-size:18px;
-    color:#002855;
-}
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0047AB;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: #0047AB;
+        }
+
 
 /* ===== FULL WIDTH SLIDER ===== */
 .slider{
@@ -149,24 +181,32 @@ footer{
 
 <body>
 
-<header>
-    <img src="static/Images/ieee-logo.png">
-    <nav>
-        <a href="index.html">Home</a>
+    <header>
+        <a href="https://www.ieee.org/" target="_blank">
+        <img src="static/Images/ieee-logo.png" alt="IEEE Logo">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
             <a href="committee.html">Committee</a>
-            <a href="session-chair.html">Session Chairs</a>
+            <!--<a href="session-chair.html">Session Chairs</a>!-->
             <a href="key-dates.html">Key Dates</a>
             <a href="call-for-papers.html">Call for Papers</a>
-            <!-- <a href="https://ieeexplore.ieee.org/xpl/conhome/11521066/proceeding">Past Events</a> -->
             <a href="registration.html">Registration</a>
-            <a href="contact.html">Contact Us</a>
             <a href="venue.html">Venue</a>
-            <a href="https://ieeexplore.ieee.org/xpl/conhome/11521066/proceeding">Past Events</a>
-    </nav>
-    <img src="static/Images/SNGU.png" alt="SNGU Logo">
-    <img src="static/Images/svkm-logo.png">
-</header>
+            <a href="student-member.html">Student Committee Members</a>
+            <a href="pastevents.html">Past Events</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
 
+        <div class="header-logos">
+            <a href="https://www.svkmnmimsgu.ac.in/" target="_blank">
+            <img src="static/Images/SNGU.png" alt="SNGU Logo">
+            </a>
+            <a href="https://www.svkm-iot.ac.in/" target="_blank">
+            <img src="static/Images/svkm-logo.png" alt="SVKM Logo">
+            </a>
+        </div>
+    </header>
 <!-- ================= FULL SLIDER ================= -->
 
 <div class="slider">
@@ -227,9 +267,9 @@ footer{
 
 </div>
 
-<footer>
-© 2027 MISSF Conference | IEEE Student Branch SVKM IOT Dhule
-</footer>
+    <footer>
+        <p>&copy; 2027 MISSF Conference | Organized by SVKM NMIMS Global University, Dhule, India.</p>
+    </footer>
 
 <!-- ================= SLIDER SCRIPT ================= -->
 
