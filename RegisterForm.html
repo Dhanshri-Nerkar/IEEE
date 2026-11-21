@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate Registration Form - IEEE Conference</title>
+    <link rel="stylesheet" href="Reg-style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="static/Images/ieee-logo.png" alt="IEEE Logo">
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="committee.html">Committee</a>
+            <a href="session-chair.html">Session Chairs</a>
+            <a href="key-dates.html">Key Dates</a>
+            <a href="call-for-papers.html">Call for Papers</a>
+            <a href="registration.html">Registration</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="venue.html">Venue</a>
+            <a href="https://ieeexplore.ieee.org/xpl/conhome/11521066/proceeding">Past Events</a>
+        </nav>
+
+        <div class="header-right">
+            <img src="static/Images/SNGU.png" alt="SNGU Logo">
+            <img src="static/Images/svkm-logo.png" alt="SVKM Logo">
+        </div>
+    </header>
+
+    <!-- Delegate Registration Section -->
+    <section class="registration">
+        <h2>Delegate Registration</h2>
+        <p>Complete Your Registration for MISSF 2027</p>
+        <p>26<sup>th</sup> - 27<sup>th</sup> February 2027 | SVKM’s Institute of Technology, Dhule</p>
+
+        <div class="registration-details">
+            <a href="registration.html" class="back-link">&larr; Back to Registration Guidelines &amp; Fee Structure</a>
+
+            <!-- Registration Form & Next Steps Section -->
+            <div id="registration-form-section">
+                <h3>Delegate Registration Form</h3>
+
+                <!-- Success Confirmation Message & Next Steps -->
+                <div id="registration-success-box" class="registration-success-box">
+                    <div class="success-checkmark">✓</div>
+                    <h4>Registration Submitted Successfully!</h4>
+                    <p>Your details have been saved for the IEEE MISSF 2027 Conference roster.</p>
+
+                    <div class="reg-id-badge">
+                        Registration ID: <strong id="res-ref-id">MISSF-2027-4891</strong>
+                    </div>
+
+                    <table class="summary-info-table">
+                        <tr>
+                            <td class="label-cell">Delegate Name</td>
+                            <td class="val-cell" id="res-name">-</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Contact Number</td>
+                            <td class="val-cell" id="res-phone">-</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Email Address</td>
+                            <td class="val-cell" id="res-email">-</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Institution / Workplace</td>
+                            <td class="val-cell" id="res-address">-</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Category</td>
+                            <td class="val-cell" id="res-category">-</td>
+                        </tr>
+                        <!-- START: IEEE MEMBERSHIP SUMMARY ROW -->
+                        <tr>
+                            <td class="label-cell">IEEE Membership</td>
+                            <td class="val-cell" id="res-ieee-member">-</td>
+                        </tr>
+                        <!-- END: IEEE MEMBERSHIP SUMMARY ROW -->
+                        <tr>
+                            <td class="label-cell">Exact Payable Fee</td>
+                            <td class="val-cell" id="res-fee" style="color: #002855; font-size: 17px;">-</td>
+                        </tr>
+                    </table>
+
+                    <!-- ======================================================== -->
+                    <!-- START: RAZORPAY "PAY FEES" BUTTON CONTAINER              -->
+                    <!-- (Add your Razorpay Checkout script, key ID & order       -->
+                    <!-- creation logic here using the "FinalFee" variable.       -->
+                    <!-- No JS functionality is attached to this button yet.)     -->
+                    <!-- ======================================================== -->
+                    <div class="razorpay-action-wrapper" id="razorpay-container">
+                        <p>Proceed to complete your conference registration fee payment:</p>
+                        <!-- RAZORPAY BUTTON ELEMENT -->
+                        <button type="button" class="btn-razorpay" id="razorpay-pay-button">
+                            <span>Pay Fees</span>
+                            <span class="rzp-badge">Razorpay</span>
+                        </button>
+                    </div>
+                    <!-- ======================================================== -->
+                    <!-- END: RAZORPAY "PAY FEES" BUTTON CONTAINER                -->
+                    <!-- ======================================================== -->
+                </div>
+
+                <!-- Registration Form Card -->
+                <div id="registration-form-card" class="registration-form-container">
+
+                    <!-- Error Summary Banner -->
+                    <div id="error-summary-alert" class="error-summary-alert">
+                        <strong>Please correct the following errors before submitting:</strong>
+                        <ul id="error-summary-list"></ul>
+                    </div>
+
+                    <form id="delegate-form" novalidate>
+
+                        <!-- Full Name Field -->
+                        <div class="form-row">
+                            <label for="fullName">
+                                Name <span class="required">*</span>
+                                <span class="counter-hint">Author / Attendee Name</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="e.g. Dr. Rajesh Sharma"
+                                required
+                            />
+                            <div id="err-name" class="error-text">Full name is required (minimum 2 characters).</div>
+                        </div>
+
+                        <!-- Number Field with 10-Digit Validation -->
+                        <div class="form-row">
+                            <label for="phoneNumber">
+                                Number <span class="required">*</span>
+                                <span id="phone-counter" class="counter-hint">10 Digits (0/10)</span>
+                            </label>
+                            <div class="phone-input-wrap">
+                                <span class="phone-prefix">+91</span>
+                                <input
+                                    type="tel"
+                                    id="phoneNumber"
+                                    name="phoneNumber"
+                                    placeholder="9876543210"
+                                    inputmode="numeric"
+                                    maxlength="10"
+                                    required
+                                />
+                            </div>
+                            <div id="err-phone" class="error-text">Please enter a valid 10-digit mobile number.</div>
+                            <div class="input-help">Enter 10-digit primary contact mobile number without country code or spaces.</div>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-row">
+                            <label for="email">
+                                Email <span class="required">*</span>
+                                <span class="counter-hint">Official / Personal Email</span>
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="e.g. rajesh.sharma@university.edu"
+                                required
+                            />
+                            <div id="err-email" class="error-text">Please enter a valid email address.</div>
+                        </div>
+
+                        <!-- Address (Institution / Workplace) Field -->
+                        <div class="form-row">
+                            <label for="address">
+                                Address (Institution / Workplace) <span class="required">*</span>
+                                <span class="counter-hint">Organization &amp; City</span>
+                            </label>
+                            <textarea
+                                id="address"
+                                name="address"
+                                placeholder="e.g. Department of Computer Engineering, SVKM's Institute of Technology, Dhule, Maharashtra"
+                                required
+                            ></textarea>
+                            <div id="err-address" class="error-text">Please enter your institution or workplace address.</div>
+                        </div>
+
+                        <!-- Category Dropdown with options: UG / PG / PhD Scholars, Industry Person, Academicians -->
+                        <div class="form-row">
+                            <label for="category">
+                                Category <span class="required">*</span>
+                                <span class="counter-hint">Select your role</span>
+                            </label>
+                            <select id="category" name="category" required>
+                                <option value="">-- Select Category --</option>
+                                <option value="UG / PG / PhD Scholars">UG / PG / PhD Scholars</option>
+                                <option value="Industry Person">Industry Person</option>
+                                <option value="Academicians">Academicians</option>
+                            </select>
+                            <div id="err-category" class="error-text">Please select a category from the dropdown.</div>
+                        </div>
+
+                        <!-- ======================================================== -->
+                        <!-- START: IEEE MEMBER DROPDOWN SELECT                       -->
+                        <!-- (Select whether the registrant is an IEEE Member or not) -->
+                        <!-- ======================================================== -->
+                        <div class="form-row">
+                            <label for="ieeeMember">
+                                IEEE Member <span class="required">*</span>
+                                <span class="counter-hint">Select membership status</span>
+                            </label>
+                            <select id="ieeeMember" name="ieeeMember" required>
+                                <option value="">-- Select IEEE Membership --</option>
+                                <option value="IEEE Member">Yes (IEEE Member)</option>
+                                <option value="Non-IEEE Member">No (Non-IEEE Member)</option>
+                            </select>
+                            <div id="err-ieee-member" class="error-text">Please select whether you are an IEEE member or not.</div>
+                        </div>
+                        <!-- ======================================================== -->
+                        <!-- END: IEEE MEMBER DROPDOWN SELECT                         -->
+                        <!-- ======================================================== -->
+
+                        <!-- Submit Button with Minimal Styling using .button class -->
+                        <div>
+                            <button type="submit" class="button" id="btn-submit-form" style="margin: 10px 0 0 0;">
+                                Submit Registration
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2027 MISSF Conference | Organized by SVKM’s Institute of Technology, Dhule</p>
+    </footer>
+
+    <!-- Internal JavaScript for Form Validation, Exact Fee Calculation & State Switch -->
+    <script>
+        /* ========================================================================= */
+        /* START: "FinalFee" GLOBAL VARIABLE FOR RAZORPAY PAYMENT INTEGRATION        */
+        /* Exact payable fee (in INR, integer) calculated on form submission.        */
+        /* Razorpay Checkout uses amount in paise: FinalFee * 100                    */
+        /* ========================================================================= */
+        var FinalFee = 0;
+        /* ========================================================================= */
+        /* END: "FinalFee" GLOBAL VARIABLE                                           */
+        /* ========================================================================= */
+
+        (function() {
+            var form = document.getElementById('delegate-form');
+            var formCard = document.getElementById('registration-form-card');
+            var successBox = document.getElementById('registration-success-box');
+
+            var nameInput = document.getElementById('fullName');
+            var phoneInput = document.getElementById('phoneNumber');
+            var emailInput = document.getElementById('email');
+            var addressInput = document.getElementById('address');
+            var categorySelect = document.getElementById('category');
+            /* START: IEEE MEMBER DROPDOWN ELEMENT & ERROR */
+            var ieeeMemberSelect = document.getElementById('ieeeMember');
+            var errIeeeMember = document.getElementById('err-ieee-member');
+            /* END: IEEE MEMBER DROPDOWN ELEMENT & ERROR */
+            var phoneCounter = document.getElementById('phone-counter');
+
+            var errName = document.getElementById('err-name');
+            var errPhone = document.getElementById('err-phone');
+            var errEmail = document.getElementById('err-email');
+            var errAddress = document.getElementById('err-address');
+            var errCategory = document.getElementById('err-category');
+            var errorSummary = document.getElementById('error-summary-alert');
+            var errorList = document.getElementById('error-summary-list');
+
+            /* ===================================================================== */
+            /* START: EXACT PAYABLE FEE SCHEDULE & "FinalFee" CALCULATION FUNCTION   */
+            /* Adjust EARLY_BIRD_DEADLINE to match your acceptance mail cutoff date. */
+            /* Amounts match the updated Registration Fee Structure (+ ₹ 500 INR).   */
+            /* ===================================================================== */
+            var EARLY_BIRD_DEADLINE = new Date('2027-01-31T23:59:59');
+
+            var exactRates = {
+                'Academicians': {
+                    earlyBird: { 'IEEE Member': 8500, 'Non-IEEE Member': 9500 },
+                    regular:   { 'IEEE Member': 9500, 'Non-IEEE Member': 10500 }
+                },
+                'UG / PG / PhD Scholars': {
+                    earlyBird: { 'IEEE Member': 8000, 'Non-IEEE Member': 9000 },
+                    regular:   { 'IEEE Member': 9000, 'Non-IEEE Member': 10000 }
+                },
+                'Industry Person': {
+                    earlyBird: { 'IEEE Member': 9000, 'Non-IEEE Member': 10000 },
+                    regular:   { 'IEEE Member': 10000, 'Non-IEEE Member': 11000 }
+                }
+            };
+
+            function calculateFinalFee(category, membershipStatus) {
+                var isEarlyBird = new Date() <= EARLY_BIRD_DEADLINE;
+                var tierKey = isEarlyBird ? 'earlyBird' : 'regular';
+                var categoryRates = exactRates[category];
+
+                if (categoryRates && categoryRates[tierKey] && categoryRates[tierKey][membershipStatus]) {
+                    FinalFee = categoryRates[tierKey][membershipStatus];
+                } else {
+                    FinalFee = 0;
+                }
+                return FinalFee;
+            }
+            /* ===================================================================== */
+            /* END: EXACT PAYABLE FEE SCHEDULE & "FinalFee" CALCULATION FUNCTION     */
+            /* ===================================================================== */
+
+            // Clear field error on input/change
+            nameInput.addEventListener('input', function() {
+                if (this.value.trim().length >= 2) {
+                    errName.classList.remove('show');
+                    nameInput.classList.remove('input-invalid');
+                }
+            });
+
+            // Only allow digits in phone input
+            phoneInput.addEventListener('input', function() {
+                this.value = this.value.replace(/\D/g, '').slice(0, 10);
+                phoneCounter.textContent = '10 Digits (' + this.value.length + '/10)';
+                if (this.value.length === 10) {
+                    errPhone.classList.remove('show');
+                    phoneInput.classList.remove('input-invalid');
+                }
+            });
+
+            emailInput.addEventListener('input', function() {
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+                if (emailPattern.test(this.value.trim())) {
+                    errEmail.classList.remove('show');
+                    emailInput.classList.remove('input-invalid');
+                }
+            });
+
+            addressInput.addEventListener('input', function() {
+                if (this.value.trim().length >= 5) {
+                    errAddress.classList.remove('show');
+                    addressInput.classList.remove('input-invalid');
+                }
+            });
+
+            categorySelect.addEventListener('change', function() {
+                if (this.value) {
+                    errCategory.classList.remove('show');
+                    categorySelect.classList.remove('input-invalid');
+                }
+            });
+
+            /* START: IEEE MEMBER DROPDOWN CHANGE LISTENER */
+            ieeeMemberSelect.addEventListener('change', function() {
+                if (this.value) {
+                    errIeeeMember.classList.remove('show');
+                    ieeeMemberSelect.classList.remove('input-invalid');
+                }
+            });
+            /* END: IEEE MEMBER DROPDOWN CHANGE LISTENER */
+
+            // Form Submit Handling
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var errors = [];
+
+                // Reset field errors
+                errName.classList.remove('show');
+                nameInput.classList.remove('input-invalid');
+                errPhone.classList.remove('show');
+                phoneInput.classList.remove('input-invalid');
+                errEmail.classList.remove('show');
+                emailInput.classList.remove('input-invalid');
+                errAddress.classList.remove('show');
+                addressInput.classList.remove('input-invalid');
+                errCategory.classList.remove('show');
+                categorySelect.classList.remove('input-invalid');
+                errIeeeMember.classList.remove('show');
+                ieeeMemberSelect.classList.remove('input-invalid');
+                errorSummary.classList.remove('show');
+                errorList.innerHTML = '';
+
+                // Validate Name
+                var nameVal = nameInput.value.trim();
+                if (!nameVal) {
+                    errName.textContent = 'Full name is required.';
+                    errName.classList.add('show');
+                    nameInput.classList.add('input-invalid');
+                    errors.push('Full name is required.');
+                } else if (nameVal.length < 2) {
+                    errName.textContent = 'Name must be at least 2 characters.';
+                    errName.classList.add('show');
+                    nameInput.classList.add('input-invalid');
+                    errors.push('Name must be at least 2 characters.');
+                }
+
+                // Validate Number (10 digits)
+                var phoneVal = phoneInput.value.trim();
+                if (!phoneVal) {
+                    errPhone.textContent = 'Contact number is required.';
+                    errPhone.classList.add('show');
+                    phoneInput.classList.add('input-invalid');
+                    errors.push('Contact number is required.');
+                } else if (phoneVal.length !== 10) {
+                    errPhone.textContent = 'Please enter a valid 10-digit number (currently ' + phoneVal.length + ' digits).';
+                    errPhone.classList.add('show');
+                    phoneInput.classList.add('input-invalid');
+                    errors.push('Please enter a valid 10-digit contact number.');
+                }
+
+                // Validate Email
+                var emailVal = emailInput.value.trim();
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+                if (!emailVal) {
+                    errEmail.textContent = 'Email address is required.';
+                    errEmail.classList.add('show');
+                    emailInput.classList.add('input-invalid');
+                    errors.push('Email address is required.');
+                } else if (!emailRegex.test(emailVal)) {
+                    errEmail.textContent = 'Please enter a valid email address (e.g. name@domain.com).';
+                    errEmail.classList.add('show');
+                    emailInput.classList.add('input-invalid');
+                    errors.push('Please enter a valid email address.');
+                }
+
+                // Validate Address (Institution / Workplace)
+                var addressVal = addressInput.value.trim();
+                if (!addressVal) {
+                    errAddress.textContent = 'Institution / workplace address is required.';
+                    errAddress.classList.add('show');
+                    addressInput.classList.add('input-invalid');
+                    errors.push('Institution / workplace address is required.');
+                } else if (addressVal.length < 5) {
+                    errAddress.textContent = 'Please enter a complete institution or workplace address (minimum 5 characters).';
+                    errAddress.classList.add('show');
+                    addressInput.classList.add('input-invalid');
+                    errors.push('Institution / workplace address must be at least 5 characters.');
+                }
+
+                // Validate Category
+                if (!categorySelect.value) {
+                    errCategory.textContent = 'Please select a registration category.';
+                    errCategory.classList.add('show');
+                    categorySelect.classList.add('input-invalid');
+                    errors.push('Registration category is required.');
+                }
+
+                /* START: IEEE MEMBER DROPDOWN VALIDATION */
+                if (!ieeeMemberSelect.value) {
+                    errIeeeMember.textContent = 'Please select whether you are an IEEE member or not.';
+                    errIeeeMember.classList.add('show');
+                    ieeeMemberSelect.classList.add('input-invalid');
+                    errors.push('IEEE membership status is required.');
+                }
+                /* END: IEEE MEMBER DROPDOWN VALIDATION */
+
+                if (errors.length > 0) {
+                    errors.forEach(function(msg) {
+                        var li = document.createElement('li');
+                        li.textContent = msg;
+                        errorList.appendChild(li);
+                    });
+                    errorSummary.classList.add('show');
+                    if (!nameVal || nameVal.length < 2) {
+                        nameInput.focus();
+                    } else if (!phoneVal || phoneVal.length !== 10) {
+                        phoneInput.focus();
+                    } else if (!emailVal || !emailRegex.test(emailVal)) {
+                        emailInput.focus();
+                    } else if (!addressVal || addressVal.length < 5) {
+                        addressInput.focus();
+                    } else if (!categorySelect.value) {
+                        categorySelect.focus();
+                    } else {
+                        ieeeMemberSelect.focus();
+                    }
+                    return;
+                }
+
+                // =================================================================
+                // START: STORE EXACT PAYABLE AMOUNT IN "FinalFee" VARIABLE
+                // =================================================================
+                FinalFee = calculateFinalFee(categorySelect.value, ieeeMemberSelect.value);
+                var isEarlyBird = new Date() <= EARLY_BIRD_DEADLINE;
+                var tierLabel = isEarlyBird ? 'Early Bird' : 'Regular';
+                // =================================================================
+                // END: STORE EXACT PAYABLE AMOUNT IN "FinalFee" VARIABLE
+                // =================================================================
+
+                // Successful submission: generate ID and show Success View
+                var randomNum = Math.floor(1000 + Math.random() * 9000);
+                var regId = 'MISSF-2027-' + randomNum;
+
+                document.getElementById('res-ref-id').textContent = regId;
+                document.getElementById('res-name').textContent = nameVal;
+                document.getElementById('res-phone').textContent = '+91 ' + phoneVal;
+                document.getElementById('res-email').textContent = emailVal;
+                document.getElementById('res-address').textContent = addressVal;
+                document.getElementById('res-category').textContent = categorySelect.value;
+                document.getElementById('res-ieee-member').textContent = ieeeMemberSelect.value;
+                document.getElementById('res-fee').textContent = '₹ ' + FinalFee.toLocaleString('en-IN') + ' (' + tierLabel + ')';
+
+                formCard.style.display = 'none';
+                successBox.classList.add('show');
+                successBox.scrollIntoView({ behavior: 'smooth' });
+            });
+        })();
+    </script>
+</body>
+</html>
